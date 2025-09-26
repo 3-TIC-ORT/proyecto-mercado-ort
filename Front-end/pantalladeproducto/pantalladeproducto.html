@@ -3,69 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Página de productos</title>
-<head>
-  <body>
+  <link rel="stylesheet" href="pantalladelproducto.css">
+</head>
+<body>
 
+  <header class="header">
+    <div class="logo">ORT MERCADO</div>
+    <div class="cart">🛒</div>
+  </header>
 
-    <table>
-<tr>
-  <td align="center">
-    <table>
-</tr>
-<td colspan="2" align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMYqmziDswrb7_SZYQMEh6RmWHjpqD-d4YA&s" width="250">
-</td>
-</tr>
-<tr>
-  <td align="center">
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4uS-fULlH88_MW2A6ARqIYCeBv12HJTQhTj9_rNQ-NO5MherIAITfooxEq3lpo0Bz1fw&usqp=CAU" width="100">
- </td>
- <td align="center">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkS0DLK6WekWa6JMaV1zZKMM77CLAlIYn4cg&s" width="100">
-   </td>
-    </tr>
-  </table>
-</td>
+  <main class="product-container">
+    <!-- Izquierda -->
+    <div class="product-images">
+      <div class="main-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMYqmziDswrb7_SZYQMEh6RmWHjpqD-d4YA&s" alt="Producto principal">
+      </div>
+      <div class="thumbnail-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4uS-fULlH88_MW2A6ARqIYCeBv12HJTQhTj9_rNQ-NO5MherIAITfooxEq3lpo0Bz1fw&usqp=CAU" alt="mini 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkS0DLK6WekWa6JMaV1zZKMM77CLAlIYn4cg&s" alt="mini 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkS0DLK6WekWa6JMaV1zZKMM77CLAlIYn4cg&s" alt="mini 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkS0DLK6WekWa6JMaV1zZKMM77CLAlIYn4cg&s" alt="mini 4">
+      </div>
+    </div>
 
-<td valign="middle">
-  <div class="derecha">
-    <p>
-      <button id="agregarafavoritos"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbYJK5cLpBg45W0ixmiAhKznxEdQ_4-G01Q&s" width="25"></button>
-      Agregar a favoritos <br><br>
-      $10.000 <br>
-      Lapicera negra y azul bic <br>
-      Info del producto: <br>
-      lapiceras bic, usadas con tinta y con algunas partesitas rotas <br><br>
-      Stock:
+    <!-- Centro -->
+    <div class="product-info">
+      <button id="favorito" class="icon-btn">♡</button>
+      <h2>$10.000</h2>
+      <h3>Lapicera: negra y azul bic</h3>
+      <p><strong>Info del producto:</strong> lapiceras bic, usadas con tinta y con algunas partesitas rotas</p>
+      <p><strong>Stock:</strong> Disponible</p>
+    </div>
 
-    </p>
- 
+    <!-- Derecha -->
+    <aside class="seller-info">
+      <h4>Info del vendedor:</h4>
+      <div class="seller-card">
+        <p><strong>Nombre:</strong> Juan</p>
+        <p><strong>Curso:</strong> 3A TIC</p>
+        <p>+10 Productos vendidos</p>
+      </div>
 
-  </div>
-  
-<br><br><br><br><br>
-  <br>
-</td>
+      <button class="btn comprar">COMPRAR AHORA</button>
+      <button class="btn carrito">AGREGAR AL CARRITO</button>
+    </aside>
+  </main>
 
-
-    <td valign="top">
-
-  <br><br><br>
-      <p>
-        Info del vendedor: <br>
-              Nombre: Juan <br>
-              Curso:3A TIC <br>
-              +10 productos vendidos <br><br>
-              
-      </p>
-
-      <button type="button" id="comprarproducto" class="comprarproducto">Comprar</button  ><br><br>
-        <button type="button" id="agregaralcarrito" class="agregaralcarrito">Agregar al carritos</button  >
-
-    
-
-    </td>
-
-  </tr>
-</table>
-    
+  <script src="pantalladelproducto.js"></script>
+</body>
+</html>
