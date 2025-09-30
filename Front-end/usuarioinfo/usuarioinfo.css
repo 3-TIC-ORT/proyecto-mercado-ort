@@ -1,0 +1,9 @@
+.top-bar {
+    background-color: #002855; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+  }

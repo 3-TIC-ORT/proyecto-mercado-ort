@@ -3,49 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Productos</title>
+  
 </head>
 <body>
+  <link rel="stylesheet" href="pantalladelcarrito.css">
+  <script src="pantalladelcarrito.js" defer></script>
 
+  <header class="top-bar">
+    <div class="logo">ORT Mercado</div>
+    <nav class="icons">
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-regular fa-user"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </nav>
+  </header>
 
-  <h2>Productos que te podrían gustar</h2>
-
+  <h2>Productos que te podrían gustar:</h2>
 
   <table>
     <tr>
-      <td align="center">
+      <td>
         <img src="https://static.vecteezy.com/system/resources/thumbnails/023/377/621/small/rectangle-white-frame-for-picture-art-gallery-png.png" width="150"><br>
-        Nombre del producto <br> <br>
-        precio
+        Cuaderno A4 <br>
+        <span class="precio">$1600</span><br>
+        <button class="btn-agregar">Agregar al carrito</button>
       </td>
-      <td align="center">
+      <td>
         <img src="https://static.vecteezy.com/system/resources/thumbnails/023/377/621/small/rectangle-white-frame-for-picture-art-gallery-png.png" width="150"><br>
-        Nombre del producto <br> <br>
-        precio
+        Lapicera BIC azul <br>
+        <span class="precio">$400</span><br>
+        <button class="btn-agregar">Agregar al carrito</button>
       </td>
-      <td align="center">
+      <td>
         <img src="https://static.vecteezy.com/system/resources/thumbnails/023/377/621/small/rectangle-white-frame-for-picture-art-gallery-png.png" width="150"><br>
-        Nombre del producto <br> <br>
-        precio
+        Lápiz de grafito <br>
+        <span class="precio">$300</span><br>
+        <button class="btn-agregar">Agregar al carrito</button>
       </td>
     </tr>
   </table>
 
+  <div class="resumen">
+    <p>Cantidad de productos: <span id="cantidad">0</span></p>
+    <p>Precio total: <span id="total">$0</span></p>
+  </div>
+
+  <button type="button" id="botoncompracarrito">FINALIZAR COMPRA</button>
 
 </body>
- 
-<br> <br>
-
-
-<p>Cantidad de productos:</p>
-
-
-<br>
-
-
-<p>Precio total:</p>
-
-
-<br><br><br>
-
-<button type="button" id="botoncompracarrito" class="botoncommpracarrito">Finalizar compra</button  >
+</html>
 
