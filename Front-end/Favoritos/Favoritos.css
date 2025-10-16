@@ -13,16 +13,15 @@ body {
     width: 1350px;
     box-sizing: border-box;
 }
+
 .Botones {
     display: flex;
-  
     align-items: end;
-
 }
 
 .Contenedor {
     display: flex;
-    align-items: center; 
+    align-items: center;
     border: 3px solid navy; 
     margin: 10px 0; 
     padding: 10px; 
@@ -53,4 +52,77 @@ body {
 
 .Descripcion {
     margin: 0;
+}
+
+
+.ContenedorImagen1 {
+    position: relative;
+    display: inline-block;
+}
+
+.ImagenGrupo {
+    width: 100%; 
+    height: auto;
+}
+
+.Lapicera {
+    position: absolute;
+    top: 20%; 
+    left: 15%; 
+    width: 140px; 
+    height: auto;
+}
+
+.ContenedorImagen2 {
+    position: relative;
+    display: inline-block;
+}
+
+.ImagenGrupo {
+    width: 100%; 
+    height: auto;
+}
+
+.Cartuchera {
+    position: absolute;
+    top: 20%; 
+    left: 20%; 
+    width: 160px; 
+    height: auto;
+}
+
+.Texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid navy;
+    padding: 10px;
+    width: 100%;
+}
+
+.ContenedorImagen3 {
+    position: relative;
+    display: inline-block;
+}
+
+.ImagenGrupo {
+    width: 100%; 
+    height: auto;
+}
+
+.Toldot {
+    position: absolute;
+    top: 20%; 
+    left: 23%; 
+    width: 130px; 
+    height: 140px;
+}
+
+.Texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid navy;
+    padding: 10px;
+    width: 100%;
 }
