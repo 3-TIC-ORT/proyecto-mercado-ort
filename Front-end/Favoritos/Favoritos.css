@@ -9,14 +9,16 @@ body {
     align-items: center;
     background-color: #154acf;
     color: white;
-    height: 80px;
-    width: 1350px;
+    height: 10%;
+    width: 100%;
     box-sizing: border-box;
 }
+
 
 .Botones {
     display: flex;
     align-items: end;
+    position: relative; 
 }
 
 .Contenedor {
@@ -26,6 +28,12 @@ body {
     margin: 10px 0; 
     padding: 10px; 
     width: 60%; 
+}
+
+.CuadradoAzul {
+    width: 100px;
+    height: 100px;
+    background-color: #154acf;
 }
 
 .EjemploImagen {
