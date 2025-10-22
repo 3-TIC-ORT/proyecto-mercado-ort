@@ -6,7 +6,7 @@ body {
   }
   
   .header {
-    background: #2047bb;
+    background: #122766;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -14,10 +14,10 @@ body {
     padding: 20px 30px;
   }
   
-  .Logo {
+  .L {
     font-weight: bold;
-    width: 8px;
-    height: 13px;
+    width: 22px;
+    height: 33px;
   }
   
   .cart {
@@ -58,7 +58,7 @@ body {
   }
   
   .thumbnail-list img:hover {
-    border: 2px solid #2047bb;
+    border: 2px solid #0c2366;
   }
   
   .product-info {
@@ -83,7 +83,7 @@ body {
   }
   
   .seller-card {
-    background: #2047bb;
+    background: #041958;
     color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -102,12 +102,12 @@ body {
   }
   
   .comprar {
-    background: #2047bb;
+    background: #0f2566;
     color: #ffffff;
   }
   
   .carrito {
-    background: #261392;
+    background: #110846;
     color: #7f76aa;
   }
   
