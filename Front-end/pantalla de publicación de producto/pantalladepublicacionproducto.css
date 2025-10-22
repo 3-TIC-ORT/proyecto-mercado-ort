@@ -5,9 +5,9 @@ body {
   }
   
   .header {
-    background: #0040ff;
+    background: #092169;
     color: white;
-    padding: 15px 20px;
+    padding: 30px 50px;
     font-size: 18px;
     font-weight: bold;
   }
@@ -52,9 +52,10 @@ body {
   }
   
   .publicar {
-    background: #0040ff;
+    background: #0c205e;
     color: white;
     font-weight: bold;
+    border-radius: 20px;
   }
   
 
@@ -67,7 +68,7 @@ body {
   
   .derecha input {
     padding: 12px;
-    border: 2px solid #0040ff;
+    border: 2px solid #091741;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;

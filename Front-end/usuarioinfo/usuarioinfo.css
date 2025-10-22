@@ -9,17 +9,16 @@
   margin-bottom: 20px;
 }
 
-.top-bar .logo {
-  font-size: 22px;
+.perfil-header {
+  font-size: 25px;
   font-weight: bold;
 }
 
 .top-bar .icons i {
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 20px;   
   cursor: pointer;
 }
-
 
 
 .perfil-container {
@@ -34,7 +33,7 @@
 
 
 
-.perfil-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +46,7 @@
 }
 
 .editar-btn {
-  background: #2c519c;
+  background: #1c3470;
   color: white;
   font-weight: bold;
   padding: 16px 23px;
