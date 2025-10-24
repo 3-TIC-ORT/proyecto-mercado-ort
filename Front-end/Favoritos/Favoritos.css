@@ -1,8 +1,12 @@
 body {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
 
+
+
+
+/* ---------- HEADER ---------- 
 .header {
     display: flex;
     justify-content: space-between;
@@ -13,124 +17,178 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+*/
 
+.header {
+    background: #154ACF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
 
+/*
 .Botones {
     display: flex;
     align-items: end;
-    position: relative; 
+    position: relative;
+    gap: 80px;
+    top: 5px;
+    right: 100px
+}
+*/
+
+.BarraDeBusqueda {
+width: 30px;
 }
 
-.Contenedor {
+/*
+.MercadoOrt {
     display: flex;
-    align-items: center;
-    border: 3px solid navy; 
-    margin: 10px 0; 
-    padding: 10px; 
-    width: 60%; 
+    align-items: end;
+    position: relative;
+   
 }
-
-.CuadradoAzul {
-    width: 100px;
-    height: 100px;
-    background-color: #154acf;
-}
-
-.EjemploImagen {
-    width: 100px;  
-    height: 100px; 
-    object-fit: cover; 
-    border: 3px solid navy;
-    margin-right: 15px;
-}
-
-.Texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px solid navy;
-    padding: 10px;
-    width: 100%;
-}
-
-.Precio {
+*/
+.L {
     font-weight: bold;
-    margin: 0;
-}
+    width: 22px;
+    height: 33px;
+  }
 
-.Descripcion {
-    margin: 0;
-}
+  .cart {
+    font-size: 40px;
+    cursor: pointer;
+  }
 
-
-.ContenedorImagen1 {
-    position: relative;
-    display: inline-block;
-}
-
-.ImagenGrupo {
-    width: 100%; 
-    height: auto;
-}
-
-.Lapicera {
-    position: absolute;
-    top: 20%; 
-    left: 15%; 
-    width: 140px; 
-    height: auto;
-}
-
-.ContenedorImagen2 {
-    position: relative;
-    display: inline-block;
-}
-
-.ImagenGrupo {
-    width: 100%; 
-    height: auto;
-}
-
-.Cartuchera {
-    position: absolute;
-    top: 20%; 
-    left: 20%; 
-    width: 160px; 
-    height: auto;
-}
-
-.Texto {
+/* ---------- CUERPO ---------- */
+.CuadradoAzul {
+    width: 630px;
+    height: 76.8vh;
+    background-color: #2A4BA1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border: 3px solid navy;
-    padding: 10px;
-    width: 100%;
+    align-items: center;
+    gap: 0.5px;
+    padding-top: 30px;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+
+
+
+/* ---------- CONTENEDORES DE PRODUCTOS ---------- */
+.ContenedorImagen1,
+.ContenedorImagen2,
 .ContenedorImagen3 {
     position: relative;
     display: inline-block;
+    width: 80%;              /* se adapta al tamaño del contenedor azul */
+  right: 10px;
+    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 530px;
+  height: 530px;
+ 
 }
 
+
+
+
+/* Imagen base con el cuadro blanco */
 .ImagenGrupo {
-    width: 100%; 
-    height: auto;
-}
-
-.Toldot {
-    position: absolute;
-    top: 20%; 
-    left: 23%; 
-    width: 130px; 
-    height: 140px;
-}
-
-.Texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px solid navy;
-    padding: 10px;
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
+
+
+
+/* Imagen del producto encima del cuadro blanco */
+/* Lapicera */
+.Lapicera {
+  position: absolute;
+  top: 15%;         /* ajusta verticalmente la posición dentro del cuadro */
+  left: 18%;        /* ajusta horizontalmente */
+  width: 140px;     /* tamaño real del cuadro blanco */
+  height: 100px;
+  object-fit: cover;  /* mantiene proporción sin recortar */
+  border-radius: 10px;
+}
+
+
+/* Cartuchera */
+.Cartuchera {
+  position: absolute;
+  top: 15%;         /* ajusta verticalmente la posición dentro del cuadro */
+  left: 18%;        /* ajusta horizontalmente */
+  width: 140px;     /* tamaño real del cuadro blanco */
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+/* Toldot */
+.Toldot {
+  position: absolute;
+top: 15%;         /* ajusta verticalmente la posición dentro del cuadro */
+  left: 18%;        /* ajusta horizontalmente */
+  width: 140px;     /* tamaño real del cuadro blanco */
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+
+
+.Lapicera:hover,
+.Cartuchera:hover,
+.Toldot:hover {
+    transform: scale(1.05); /* efecto suave al pasar el mouse */
+}
+
+
+
+
+/* ---------- TEXTO ---------- */
+.Texto {
+display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical dentro de su altura */
+  align-items: center;     /* centra horizontal */
+  text-align: center;      /* centra el texto */
+  width: 90%;
+  padding: 10px;
+   
+}
+
+
+
+
+.precio {
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+
+
+
+.cantidadDeProductos {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+
+
+
