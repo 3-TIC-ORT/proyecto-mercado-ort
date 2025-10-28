@@ -6,25 +6,50 @@ body {
   }
   
   .header {
-    background: #122766;
+    height: 70px;
+    background: #154acf;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
   }
-  
-  
-  .L {
-    font-weight: bold;
-    width: 22px;
-    height: 33px;
+
+  #Búsqueda {
+    width: 420px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
   }
   
-  .cart {
-    font-size: 40px;
+  #Búsqueda:focus {
+    border-color: #1a4270;
+    box-shadow: 0 0 5px #1a3d66;
+  }
+
+  .Logo img
+  .user img,
+  .favoritos img,
+  .cart img {
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    transition: transform 0.2s ease;
   }
+  .user img:hover,
+.favoritos img:hover,
+.cart img:hover {
+  transform: scale(1.1);
+}
+
+.user, .favoritos, .cart {
+  margin-left: 15px;
+}
+  
+ 
   
   .product-container {
     display: grid;
@@ -103,12 +128,35 @@ body {
   }
   
   .comprar {
-    background: #0f2566;
-    color: #ffffff;
+    
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin: 10px auto;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: rgb(255, 255, 255);
+    color: white;
+    background-color: #154acf; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
   
   .carrito {
-    background: #110846;
-    color: #7f76aa;
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin: 10px auto;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0f0a41; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
   
