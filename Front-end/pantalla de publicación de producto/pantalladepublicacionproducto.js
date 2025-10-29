@@ -5,6 +5,6 @@ document.querySelector(".upload-box").addEventListener("click", () => {
   
 
   document.getElementById("publicarproducto").addEventListener("click", () => {
-    alert("✅ Tu producto fue publicado con éxito!");
+    alert(" Tu producto fue publicado con éxito!");
   });
   

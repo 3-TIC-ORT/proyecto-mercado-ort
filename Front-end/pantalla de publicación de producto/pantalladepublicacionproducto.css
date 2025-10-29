@@ -5,15 +5,49 @@ body {
   }
   
   .header {
-    background: #092169;
+    background: #154acf;
     color: white;
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
   }
 
   
+  #Búsqueda {
+    width: 520px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
+  }
   
+  #Búsqueda:focus {
+    border-color: #1a4270;
+    box-shadow: 0 0 5px #1a3d66;
+  }
+
+  .Logo img
+  .user img,
+  .favoritos img,
+  .cart img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+  }
+  .user img:hover,
+.favoritos img:hover,
+.cart img:hover {
+  transform: scale(1.1);
+}
+
+.user, .favoritos, .cart {
+  margin-left: 15px;
+}
   
   .container {
     display: flex;
@@ -55,10 +89,10 @@ body {
   }
   
   .publicar {
-    background: #0c205e;
+    background: #154acf;
     color: white;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 30px;
   }
   
 
