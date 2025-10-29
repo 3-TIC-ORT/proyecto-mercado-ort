@@ -1,11 +1,14 @@
 .body {
    margin: 0;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
 }
 
 
+
+
 .Fondo {
-   width: 100vw;
+   width: 100%;
    height: 100vh;
    background-color: #154ACF;
    display: flex;
@@ -18,16 +21,6 @@
 
 
 
-.contenedor {
-   display: flex;
-   flex-direction: column;
-text-align: center;
-color: white;
-width: 50%;
-height: 100%;
-}
-
-
 .titulo {
    position: absolute;
    top: 3%;            
@@ -38,6 +31,8 @@ height: 100%;
    margin: 0;
    margin-bottom: 30px;
 }
+
+
 
 
 .CuadradoGris {
@@ -53,14 +48,24 @@ height: 100%;
    top: 15%;
 }
 
+
+.CuadradoAzul1 {
+   width: 100%;
+   height: 8vh;
+   background-color: #1B1464;
+   position: absolute;
+   top: 3.5%;
+}
+
 .CuadradoAzul {
-   width: 61VH;
+   width: 100%;
    height: 9vh;
    background-color: #1B1464;
-   border-radius: 18px;
-   gap: none;
+   border-radius: 17px;
    top: 1%;
 }
+
+
 
 .MercadoOrt {
 position: absolute;
@@ -69,19 +74,23 @@ left: 30%;
 }
 
 
+
+
 .Formulario {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 20px;
+   gap: 15px;
    position: absolute;
-   top: 10%;
+   top: 26%;
+   justify-self: center;
  }
+
 
  .BotonDeDNI,
  .BotonDeContraseña {
-   width: 300px;
-   height: 40px;
+   width: 100%;
+   height: 4vh;
    border-radius: 10px;
    background-color: #1B1464;
    color: white;
@@ -98,14 +107,14 @@ left: 30%;
  }
  
  .BotonDeEntrar {
-   width: 200px;
+   width: 17vw;
    height: 45px;
    border-radius: 10px;
    color: #1B1464;
    background-color: white;
    border: 3px solid #1B1464;
    font-weight: bold;
-   font-size: 35px;
+   font-size: 30px;
    cursor: pointer;
  }
  
@@ -119,11 +128,28 @@ left: 30%;
    font-weight: bold;
  }
  
- .Error {
+ .BotonError {
    color: red;
-   font-weight: bold;
-   margin-top: 10px;
+   font-weight: 1000;
+   width: 19vw;
+   height: 7vh;
+   border-radius: 15px;
+   background-color: white;
+   border: 3px solid red;
+   font-size: 15px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
+
+
+
+
+
+
+
+
 
 
 
@@ -144,7 +170,15 @@ left: 30%;
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -164,6 +198,10 @@ color: rgba(255, 255, 255, 0.74);
 
 
 
+
+
+
+
 .BotonDeContraseña  {
    width: 400px;
    height: 40px;
@@ -175,7 +213,15 @@ color: rgba(255, 255, 255, 0.74);
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -191,6 +237,10 @@ font-weight: 500;
 font-size: 20px;
 color: rgba(255, 255, 255, 0.74);
 }
+
+
+
+
 
 
 
@@ -215,8 +265,26 @@ font-size: 20px;
 cursor: pointer;
 
 
+
+
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
