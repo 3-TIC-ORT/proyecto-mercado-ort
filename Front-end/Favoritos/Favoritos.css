@@ -1,12 +1,7 @@
-body {
+.body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
 }
-
-
-
-
-
 
 .header {
   background: #154ACF;
@@ -17,7 +12,13 @@ body {
   padding: 20px 40px;
 
 
+
+
 }
+
+
+
+
 
 
 
@@ -34,6 +35,10 @@ body {
 
 
 
+
+
+
+
 .BarraDeBusqueda {
 width: 700px;
 height: 45px;
@@ -44,7 +49,10 @@ position: relative;
 left: -90px;
 padding: 5px 7px;
 
+
 }
+
+
 
 
 .BarraDeBusqueda::placeholder {
@@ -56,10 +64,14 @@ line-height: 45px;
 }
 
 
+
+
 .cart {
   font-size: 40px;
   cursor: pointer;
 }
+
+
 
 
 /* ---------- CUERPO ---------- */
@@ -85,6 +97,14 @@ justify-content: space-evenly;
 
 
 
+
+
+
+
+
+
+
+
 /* ---------- CONTENEDORES DE PRODUCTOS ---------- */
 .ContenedorImagen1,
 .ContenedorImagen2,
@@ -100,7 +120,16 @@ align-items: center;
 width: 800px;
 height: 530px;
 
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -115,6 +144,16 @@ height: 530px;
   height: 100%;
   object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,6 +179,12 @@ border-radius: 10px;
 
 
 
+
+
+
+
+
+
 .Cartuchera {
 position: absolute;
 top: 18%;        
@@ -149,6 +194,12 @@ height: 150px;
 object-fit: contain;
 border-radius: 10px;
 }
+
+
+
+
+
+
 
 
 
@@ -172,11 +223,27 @@ border-radius: 10px;
 
 
 
+
+
+
+
+
+
+
+
 .Lapicera:hover,
 .Cartuchera:hover,
 .Toldot:hover {
   transform: scale(1.05); /* efecto suave al pasar el mouse */
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -204,6 +271,8 @@ font-size: 30px;
 }
 
 
+
+
 .Texto2 {
 display: flex;
 flex-direction: column;
@@ -224,11 +293,17 @@ font-size: 30px;
 
 
 
+
+
+
+
 .precio {
   font-weight: bold;
   margin: 0;
   color: #000000;
 }
+
+
 
 
 .finalizarCompra {
@@ -243,11 +318,15 @@ background-color: #051434;
 }
 
 
+
+
 .TextoFinalizarCompra {
 display: flex;
 align-items: center;
 justify-content: center;
 height: 15px;
+
+
 
 
 font-family: 'Montserrat', sans-serif;
@@ -257,3 +336,5 @@ letter-spacing: 2px;
 text-decoration: none; /* no funciona */
 padding: 10px 20px;
 }
+
+
