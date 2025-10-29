@@ -11,6 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
+    height: 70px;
   }
 
   
@@ -27,7 +28,16 @@ body {
   #Búsqueda:focus {
     border-color: #1a4270;
     box-shadow: 0 0 5px #1a3d66;
+  
   }
+
+.Logo {
+
+height: 65px;
+justify-content: end;
+align-items: start;
+
+}
 
   .Logo img
   .user img,

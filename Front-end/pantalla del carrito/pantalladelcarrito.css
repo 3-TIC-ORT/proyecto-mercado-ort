@@ -5,26 +5,59 @@
     box-sizing: border-box;
   }
   .top-bar {
-    background-color: #002855; 
+    background: #154acf;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    margin-bottom: 20px;
+    padding: 20px 30px;
+    height: 90px;
   }
   
-  .Logo {
-    font-size: 22px;
-    font-weight: bold;
+  #Búsqueda {
+    width: 520px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
   }
   
-  .top-bar .icons i {
-    margin-left: 20px;
-    font-size: 20px;
+  #Búsqueda:focus {
+    border-color: #1a4270;
+    box-shadow: 0 0 5px #1a3d66;
+  
+  }
+
+.Logo {
+
+height: 65px;
+justify-content: end;
+align-items: start;
+
+}
+
+  .Logo img
+  .user img,
+  .favoritos img,
+  .cart img {
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+    
   }
-  
+  .user img:hover,
+.favoritos img:hover,
+.cart img:hover {
+  transform: scale(1.1);
+}
+
+.user, .favoritos, .cart {
+  margin-left: 15px;
+}
+
   body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;

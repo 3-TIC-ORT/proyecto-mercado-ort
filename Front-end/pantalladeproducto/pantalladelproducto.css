@@ -16,7 +16,7 @@ body {
   }
 
   #Búsqueda {
-    width: 420px;
+    width: 520px;
     padding: 10px 14px;
     border-radius: 20px;
     border: 1px solid #ccc;
@@ -28,16 +28,26 @@ body {
   #Búsqueda:focus {
     border-color: #1a4270;
     box-shadow: 0 0 5px #1a3d66;
+  
   }
+
+.Logo {
+
+height: 65px;
+justify-content: end;
+align-items: start;
+
+}
 
   .Logo img
   .user img,
   .favoritos img,
   .cart img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     transition: transform 0.2s ease;
+    
   }
   .user img:hover,
 .favoritos img:hover,
@@ -48,8 +58,7 @@ body {
 .user, .favoritos, .cart {
   margin-left: 15px;
 }
-  
- 
+
   
   .product-container {
     display: grid;
@@ -89,6 +98,9 @@ body {
   
   .product-info {
     position: relative;
+    font-family: Montserrat;
+    font-weight: semibold;
+    font-size: medium;
   }
   
   .icon-btn {
