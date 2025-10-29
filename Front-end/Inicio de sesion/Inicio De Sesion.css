@@ -1,6 +1,8 @@
 .body {
-   background-color: red;
+   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
 
 .Fondo {
    width: 100vw;
@@ -9,28 +11,128 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   position: relative;
+   flex-direction: column;
 }
+
+
+
+
+.contenedor {
+   display: flex;
+   flex-direction: column;
+text-align: center;
+color: white;
+width: 50%;
+height: 100%;
+}
+
+
+.titulo {
+   position: absolute;
+   top: 3%;            
+   left: 50%;
+   transform: translateX(-50%);
+   color: white;
+   font-size: 40px;
+   margin: 0;
+   margin-bottom: 30px;
+}
+
 
 .CuadradoGris {
    display: flex;
    align-items: center ;
-   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
    width: 30%;
-   height: 60%;
+   height: 50%;
    background-color: rgba(255, 255, 255, 0.85);
    border-radius: 17px;
-   
+   position: absolute;
+   top: 15%;
 }
 
-.TextoInicioDeSesion {
-   width: 100px;
-   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 10%;
+.CuadradoAzul {
+   width: 61VH;
+   height: 9vh;
+   background-color: #1B1464;
+   border-radius: 18px;
+   gap: none;
+   top: 1%;
 }
 
+.MercadoOrt {
+position: absolute;
+top: 2%;
+left: 30%;
+}
+
+
+.Formulario {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   position: absolute;
+   top: 10%;
+ }
+
+ .BotonDeDNI,
+ .BotonDeContraseña {
+   width: 300px;
+   height: 40px;
+   border-radius: 10px;
+   background-color: #1B1464;
+   color: white;
+   border: none;
+   text-align: left;
+   font-size: 16px;
+   padding-left: 10px;
+ }
+ 
+ .BotonDeDNI::placeholder,
+ .BotonDeContraseña::placeholder {
+   color: rgba(255, 255, 255, 0.7);
+   text-align: left;
+ }
+ 
+ .BotonDeEntrar {
+   width: 200px;
+   height: 45px;
+   border-radius: 10px;
+   color: #1B1464;
+   background-color: white;
+   border: 3px solid #1B1464;
+   font-weight: bold;
+   font-size: 35px;
+   cursor: pointer;
+ }
+ 
+ .BotonDeEntrar:hover {
+   background-color: #e0e0e0;
+ }
+ 
+ .Registrarse {
+   text-decoration: none;
+   color: #1B1464;
+   font-weight: bold;
+ }
+ 
+ .Error {
+   color: red;
+   font-weight: bold;
+   margin-top: 10px;
+ }
+
+
+
+
+
+
+
+
+ /*
 .BotonDeDNI {
    width: 400px;
    height: 40px;
@@ -40,7 +142,11 @@
     font-weight: bold;
 
 
+
+
 }
+
+
 
 
 .BotonDeDNI::placeholder {
@@ -56,6 +162,8 @@ color: rgba(255, 255, 255, 0.74);
 }
 
 
+
+
 .BotonDeContraseña  {
    width: 400px;
    height: 40px;
@@ -65,7 +173,11 @@ color: rgba(255, 255, 255, 0.74);
     font-weight: bold;
 
 
+
+
 }
+
+
 
 
 .BotonDeContraseña::placeholder {
@@ -79,6 +191,8 @@ font-weight: 500;
 font-size: 20px;
 color: rgba(255, 255, 255, 0.74);
 }
+
+
 
 
 .BotonDeEntrar {
@@ -100,4 +214,12 @@ font-weight: bold;
 font-size: 20px;
 cursor: pointer;
 
+
 }
+*/
+
+
+
+
+
+
