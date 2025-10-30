@@ -18,7 +18,7 @@ body {
   #Búsqueda {
     width: 520px;
     padding: 10px 14px;
-    border-radius: 20px;
+    border-radius: 0px;
     border: 1px solid #ccc;
     font-size: 14px;
     outline: none;
@@ -31,13 +31,13 @@ body {
   
   }
 
-.Logo {
+  .Logo {
 
-height: 65px;
-justify-content: end;
-align-items: start;
+   height: 65px;
+  justify-content: end;
+   align-items: start;
 
-}
+   }
 
   .Logo img
   .user img,

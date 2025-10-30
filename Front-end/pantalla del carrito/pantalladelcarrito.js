@@ -8,7 +8,7 @@ const productos = [
 ];
 
 
-document.querySelectorAll(".btn-agregar").forEach((boton, index) => {
+document.querySelectorAll("Agregar al carrito").forEach((boton, index) => {
   boton.addEventListener("click", () => {
     cantidadProductos++;
     precioTotal += productos[index].precio;
@@ -20,7 +20,7 @@ function actualizarResumen() {
   document.getElementById("cantidad").innerText = cantidadProductos;
   document.getElementById("total").innerText = "$" + precioTotal;
 }
-document.getElementById("botoncompracarrito").addEventListener("click", () => {
+document.getElementById("Agregar al carrito").addEventListener("click", () => {
   if (cantidadProductos === 0) {
     alert("⚠️ No agregaste productos al carrito.");
   } else {
