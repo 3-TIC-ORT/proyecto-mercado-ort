@@ -1,11 +1,35 @@
-document.querySelector("form").addEventListener("submit", function(event) {
-    const clave = document.getElementById("clave").value;
-    const clave2 = document.getElementById("clave2").value;
+document.addEventListener("DOMContentLoaded", function () {
+  const botonRegistrar = document.getElementById("BotondeRegistrar");
+  const contraseña1 = document.getElementById("CajaDeContraseña");
+  const contraseña2 = document.getElementById("CajaDeContraseña2");
+  const divError = document.getElementById("BotonError");
+  const mensajeError = document.getElementById("MensajeDeError");
+
+  botonRegistrar.addEventListener("click", function (event) {
+    event.preventDefault(); 
+
+    const pass1 = contraseña1.value.trim();
+    const pass2 = contraseña2.value.trim();
+
+    
+    if (pass1 === "" || pass2 === "") {
+      mensajeError.textContent = "ERROR: ASEGÚRESE DE COMPLETAR AMBAS CONTRASEÑAS";
+      divError.style.display = "flex";
+      mensajeError.style.display = "block";
+    } else if (pass1 !== pass2) {
+      mensajeError.textContent = "ERROR: ASEGÚRESE DE REPETIR LA CONTRASEÑA CORRECTAMENTE";
+      divError.style.display = "flex";
+      mensajeError.style.display = "block";
+    } else {
+   
+      divError.style.display = "none";
+      mensajeError.style.display = "none";
+
   
-    if (clave !== clave2) {
-      event.preventDefault(); 
-      alert("Las contraseñas no coinciden. Intenta de nuevo.");
+      console.log("Registro exitoso");
+            window.location.href = "../Inicio/Inicio.html";
     }
   });
-  
+});
+
   

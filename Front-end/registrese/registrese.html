@@ -12,23 +12,19 @@
      <div class="CuadradoGris">
        
        <div class="CuadradoAzul1"></div>
-       <div class="CuadradoAzul"> <img src="Group 66.png"  height="45vh" class="Logo"></div>
+       <div class="CuadradoAzul"><img src="Group 66.png"  height="55vh" class="Logo"></div>
        <div class="Formulario">
       
-    <input type="text" id="nombre" name="nombre" placeholder= "nombre" required><br><br>
-
-    <input type="text" id="apellido" name="apellido" placeholder=" apellido" required><br><br>
+    <input type="text"PlaceHolder="Nombre" id="CajaDeNombre" class="BotonDeNombre"  required>
+    <input type="text"PlaceHolder="Apellido" id="CajaDeApellido" class="BotonDeApellido" required>
     <input type="text"PlaceHolder="DNI" id="CajaDeDNI" class="BotonDeDNI">
-    <input type="email" id="correo" name="correo" placeholder="ejemplo@mail.com" required><br><br>
+    <input type="email"PlaceHolder="Mail" id="CajaDeMail" class="BotonDeMail" required>
+    <input type="text"PlaceHolder="Contraseña" id="CajaDeContraseña" class="BotonDeContraseña" required>
+    <input type="text"PlaceHolder="Repetir Contraseña" id="CajaDeContraseña2" class="BotonDeContraseña2" required>
 
-    <input type="password" id="clave" name="clave" placeholder="Crea una contraseña" required><br><br>
-
-    <input type="password" id="clave2" name="clave2" placeholder="Repite la contraseña" required><br><br>
-
+    
+        <button id="BotondeRegistrar" class="BotonDeRegistrar"> REGISTRARSE </button>
         
-        <input type="text"PlaceHolder="Contraseña" id="CajaDeContraseña" class="BotonDeContraseña">
-        <button id="Botonderegistrar" class="BotonDeEntrar"> ENTRAR </button>
-        <a href="../registrese/registrese.html" class="Registrarse">REGISTRARSE</a>
         <div  class="BotonError" id="BotonError" style="display: none;"> 
          <p id="MensajeDeError"  style="display: none;" >  ERROR: <br>DNI o contraseña incorrecta</p>
         </div>
@@ -39,3 +35,4 @@
   <script src="registrese.js"></script>
 </body>
 </html>
+

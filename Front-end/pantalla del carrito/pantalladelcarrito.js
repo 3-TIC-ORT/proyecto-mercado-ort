@@ -7,23 +7,17 @@ const productos = [
   { nombre: "Lápiz de grafito", precio: 300 }
 ];
 
+const botones = document.querySelectorAll(".producto button");
+const cantidadSpan = document.getElementById("cantidad");
+const totalSpan = document.getElementById("total");
 
-document.querySelectorAll("Agregar al carrito").forEach((boton, index) => {
+
+botones.forEach((boton, index) => {
   boton.addEventListener("click", () => {
     cantidadProductos++;
     precioTotal += productos[index].precio;
-    actualizarResumen();
-  });
-});
 
-function actualizarResumen() {
-  document.getElementById("cantidad").innerText = cantidadProductos;
-  document.getElementById("total").innerText = "$" + precioTotal;
-}
-document.getElementById("Agregar al carrito").addEventListener("click", () => {
-  if (cantidadProductos === 0) {
-    alert("⚠️ No agregaste productos al carrito.");
-  } else {
-    alert("✅ Compra realizada con éxito.\nProductos: " + cantidadProductos + "\nTotal: $" + precioTotal);
-  }
+    cantidadSpan.textContent = cantidadProductos;
+    totalSpan.textContent = `$${precioTotal}`;
+  });
 });
