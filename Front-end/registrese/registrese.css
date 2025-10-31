@@ -1,50 +1,144 @@
 .body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .form {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    width: 300px;
-  }
-  
-  .h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .button {
-    width: 100%;
-    background: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .button:hover:hover {
-    background: #45a049;
-  }
-  
+  margin: 0;
+ font-family: 'Montserrat', sans-serif;
+ width: 100%;
+}
+
+
+
+
+.Fondo {
+  width: 100%;
+  height: 100vh;
+  background-color: #154ACF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+
+
+
+.titulo {
+  position: absolute;
+  top: 3%;            
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+
+
+
+.CuadradoGris {
+  display: flex;
+  align-items: center ;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 17px;
+  position: absolute;
+  top: 15%;
+}
+
+
+.CuadradoAzul1 {
+  width: 100%;
+  height: 8vh;
+  background-color: #1B1464;
+  position: absolute;
+  top: 3.5%;
+}
+
+.CuadradoAzul {
+  width: 100%;
+  height: 9vh;
+  background-color: #1B1464;
+  border-radius: 17px;
+  top: 1%;
+}
+
+
+
+.Logo {
+position: absolute;
+top: 2%;
+left: 30%;
+}
+
+
+
+
+.Formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 26%;
+  justify-self: center;
+}
+
+
+.BotonDeDNI,
+.BotonDeContraseña {
+  width: 100%;
+  height: 4vh;
+  border-radius: 10px;
+  background-color: #1B1464;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.BotonDeDNI::placeholder,
+.BotonDeContraseña::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+}
+
+.BotonDeEntrar {
+  width: 17vw;
+  height: 45px;
+  border-radius: 10px;
+  color: #1B1464;
+  background-color: white;
+  border: 3px solid #1B1464;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.BotonDeEntrar:hover {
+  background-color: #e0e0e0;
+}
+
+.Registrarse {
+  text-decoration: none;
+  color: #1B1464;
+  font-weight: bold;
+}
+
+.BotonError {
+  color: red;
+  font-weight: 1000;
+  width: 19vw;
+  height: 7vh;
+  border-radius: 15px;
+  background-color: white;
+  border: 3px solid red;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
