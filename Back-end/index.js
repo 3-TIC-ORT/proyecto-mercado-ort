@@ -4,18 +4,10 @@ let respuesta;
 
 function registrarse(usuario)
 {
-console.log(usuario.user);
-console.log(usuario.contraseña);
- let ok;   
+let ok;   
 let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
 
 for (let i = 0; i <= listaDeUsuarios.length; i++) 
-{
-if(usuario.user === "" || usuario.contraseña === "")
-{
-    return "Por favor complete todos los campos";
-}
-else
 {
     if (listaDeUsuarios[i])
         {
@@ -34,7 +26,7 @@ else
          ok = true;
          return "hecho";
         }
-}
+
 }
 }
 
