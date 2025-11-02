@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+ connect2Server(3000);
+
   const botonRegistrar = document.getElementById("BotondeRegistrar");
   const contraseña1 = document.getElementById("CajaDeContraseña");
   const contraseña2 = document.getElementById("CajaDeContraseña2");
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (nombreValor === "" || apellidoValor === "" || dniValor === "" || mailValor === "" || pass1 === "" || pass2 === "") {
       mensajeError.textContent = "ERROR: ASEGÚRESE DE COMPLETAR TODOS LOS CAMPOS";
-      divError.style.display = "flex";
+      divError.style.display = "flex";  
       mensajeError.style.display = "block";
     } else if (pass1 !== pass2) {
       mensajeError.textContent = "ERROR: ASEGÚRESE DE REPETIR LA CONTRASEÑA CORRECTAMENTE";
@@ -34,14 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
       divError.style.display = "none";
       mensajeError.style.display = "none";
 
-      
-      window.location.href = "../Inicio/Inicio.html";
       postEvent("registro", {user: nombreValor, apellido: apellidoValor, dni: dniValor, mail: mailValor, contraseña: pass1, favoritos: null, carrito: null}, function(respuesta) {
-      console.log("Respuesta del backend:", respuesta);
-      if()
+      if(respuesta === 0)
       {
-
+        window.location.href = "../Inicio/Inicio.html";
       } 
+      else if(respuesta === 1)
+      {
+        mensajeError.textContent = "ERROR: ESE USUARIO YA ESTÁ EN USO";
+        divError.style.display = "flex";
+        mensajeError.style.display = "block";
+      }
+           else if(respuesta === 2)
+      {
+        mensajeError.textContent = "ERROR: ESE MAIL YA ESTÁ EN USO";
+        divError.style.display = "flex";
+        mensajeError.style.display = "block";
+      }
+           else if(respuesta === 1)
+      {
+        mensajeError.textContent = "ERROR: ESE DNI YA ESTÁ EN USO";
+        divError.style.display = "flex";
+        mensajeError.style.display = "block";
+      }
       });
     }
   });

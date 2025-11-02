@@ -1,6 +1,20 @@
 [
-    {
-        "user": "Ciro",
-        "contraseña": "Raffaele" 
-    }
+  {
+    "user": "ciro",
+    "apellido": "raffaele",
+    "dni": "49671693",
+    "mail": "ciro.raffaele@gmail.com",
+    "contraseña": "1234",
+    "favoritos": null,
+    "carrito": null
+  },
+  {
+    "user": "vicente",
+    "apellido": "verruno",
+    "dni": "491234",
+    "mail": "vicen.verruno@gmail.com",
+    "contraseña": "123",
+    "favoritos": null,
+    "carrito": null
+  }
 ]
