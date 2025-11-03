@@ -5,8 +5,8 @@
     "dni": "49671693",
     "mail": "ciro.raffaele@gmail.com",
     "contraseña": "1234",
-    "favoritos": null,
-    "carrito": null
+    "favoritos": [],
+    "carrito": []
   },
   {
     "user": "vicente",
@@ -14,7 +14,36 @@
     "dni": "491234",
     "mail": "vicen.verruno@gmail.com",
     "contraseña": "123",
-    "favoritos": null,
-    "carrito": null
+    "favoritos": [],
+    "carrito": []
+  },
+  {
+    "user": "vicenten",
+    "apellido": "verruno",
+    "dni": "491234n",
+    "mail": "vicen.verruno@gmail.comm",
+    "contraseña": "123",
+    "favoritos": [],
+    "carrito": []
+  },
+  {
+    "id": null,
+    "user": "nacho",
+    "apellido": "leiva",
+    "dni": "50123",
+    "mail": "nacho.leiva@gmail.com",
+    "contraseña": "123",
+    "favoritos": [],
+    "carrito": []
+  },
+  {
+    "id": 4,
+    "user": "mati",
+    "apellido": "pitkowsky",
+    "dni": "4912345",
+    "mail": "mati.pit@gmail.com",
+    "contraseña": "123",
+    "favoritos": [],
+    "carrito": []
   }
 ]

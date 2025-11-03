@@ -5,10 +5,9 @@ let respuesta;
 //registro
 function registrarse(usuario)
 {
-
-console.log("anda registro");
 let ok;   
 let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
+usuario.id = listaDeUsuarios.length;
 
 //recorre la lista de usuarios para comparar si la cuenta ya existe o los atributos están en uso
 for (let i = 0; i <= listaDeUsuarios.length; i++) 
@@ -23,16 +22,16 @@ for (let i = 0; i <= listaDeUsuarios.length; i++)
           return 1;
           // Ese usuario ya está en uso
          }
-         else if(usuario.mail === listaDeUsuarios[i].mail)
-         {
-            return 2;
-            // Ese mail ya está en uso
-         }
          else if (usuario.dni === listaDeUsuarios[i].dni)
          {
-            return 3;
+            return 2;
             // Ese usuario ya está en uso
 
+         }
+         else if(usuario.mail === listaDeUsuarios[i].mail)
+         {
+            return 3;
+            // Ese mail ya está en uso
          }
         }
         if (i === listaDeUsuarios.length)
@@ -83,13 +82,38 @@ if (i === listaDeUsuarios.length)
 }
 }
 }
-
-function agregarFavoritos(nuevoFavorito)
+//parametro favorito: {idUsuario: 2, idProducto: 7, agregar: true/false}
+function modificarFavoritos(favorito)
 {
-
+  let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
+  for (let i = 0; i <= listaDeUsuarios.length; i++)
+  {
+    if(favorito.idUsuario === listaDeUsuarios[i].id)
+    {
+      if(favorito.agregar)
+      {
+       listaDeUsuarios[i].favoritos.push(favorito.idProducto);
+      }
+      else
+      {
+       let favoritosNuevo = [];
+    for (let i = 0; i < listaDeUsuarios.favoritos.length; i++)
+      {  
+        if (listaDeUsuarios.favoritos[i] !== favorito.idProducto)
+        {
+            favoritosNuevo.push(listaDeUsuarios.favoritos[i]);
+        }
+      }
+       listaDeUsuarios.favoritos = favoritosNuevo;
+       fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+       console.log(arrayColeccion);
+      }
+    }
+  }
 }
 
 subscribePOSTEvent("registro", registrarse);
 subscribePOSTEvent("inicioSesion", login);
+subscribePOSTEvent("modificarFavorito", modificarFavoritos);
 
 startServer(3000, true);
