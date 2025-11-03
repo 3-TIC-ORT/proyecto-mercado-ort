@@ -106,7 +106,7 @@ function modificarFavoritos(favorito)
       }
        listaDeUsuarios.favoritos = favoritosNuevo;
        fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
-       console.log(arrayColeccion);
+       console.log(listaDeUsuarios.favoritos);
       }
     }
   }

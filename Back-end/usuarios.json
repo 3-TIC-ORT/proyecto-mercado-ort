@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "user": "ciro",
     "apellido": "raffaele",
     "dni": "49671693",
@@ -9,6 +10,7 @@
     "carrito": []
   },
   {
+    "id": 1,
     "user": "vicente",
     "apellido": "verruno",
     "dni": "491234",
@@ -18,6 +20,7 @@
     "carrito": []
   },
   {
+    "id": 2,
     "user": "vicenten",
     "apellido": "verruno",
     "dni": "491234n",
@@ -27,7 +30,7 @@
     "carrito": []
   },
   {
-    "id": null,
+    "id": 3,
     "user": "nacho",
     "apellido": "leiva",
     "dni": "50123",
