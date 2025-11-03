@@ -26,7 +26,11 @@
     "dni": "491234n",
     "mail": "vicen.verruno@gmail.comm",
     "contraseña": "123",
-    "favoritos": [],
+    "favoritos": [
+      7,
+      5,
+      7
+    ],
     "carrito": []
   },
   {

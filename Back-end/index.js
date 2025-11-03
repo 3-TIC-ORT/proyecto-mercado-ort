@@ -56,12 +56,6 @@ let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "ut
 //recorre la lista
 for (let i = 0; i <= listaDeUsuarios.length; i++) 
 {
-if(usuario.user === "" || usuario.contraseña === "")
-{
-   // return "Por favor complete todos los campos";
-}
-else
-{
 if (listaDeUsuarios[i])
 {
  if(usuario.user === listaDeUsuarios[i].user && usuario.contraseña === listaDeUsuarios[i].contraseña)
@@ -81,32 +75,35 @@ if (i === listaDeUsuarios.length)
 }
 }
 }
-}
-//parametro favorito: {idUsuario: 2, idProducto: 7, agregar: true/false}
+//parametro favorito: {idUsuario: 2, idProducto: 7, modificar: true/false}
 function modificarFavoritos(favorito)
 {
   let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
-  for (let i = 0; i <= listaDeUsuarios.length; i++)
+  for (let i = 0; i < listaDeUsuarios.length; i++)
   {
     if(favorito.idUsuario === listaDeUsuarios[i].id)
     {
-      if(favorito.agregar)
+      if(favorito.modificar)
       {
        listaDeUsuarios[i].favoritos.push(favorito.idProducto);
+       fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+       console.log(listaDeUsuarios[i].favoritos);
+       return true;
       }
       else
       {
        let favoritosNuevo = [];
-    for (let i = 0; i < listaDeUsuarios.favoritos.length; i++)
-      {  
+       console.log(listaDeUsuarios.favoritos.length);
+       for (let i = 0; i < listaDeUsuarios.favoritos.length; i++)
+       {  
         if (listaDeUsuarios.favoritos[i] !== favorito.idProducto)
         {
             favoritosNuevo.push(listaDeUsuarios.favoritos[i]);
         }
-      }
+       }
        listaDeUsuarios.favoritos = favoritosNuevo;
        fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
-       console.log(listaDeUsuarios.favoritos);
+       return false
       }
     }
   }
