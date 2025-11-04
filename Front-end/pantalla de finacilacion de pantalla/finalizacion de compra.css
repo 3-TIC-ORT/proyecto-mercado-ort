@@ -1,32 +1,156 @@
-.seleccionado {
-    border: 2px dashed gray;
-    width: 200px;
+.header {
+    background: #154ACF;
+    color: #fff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    background: #f2f2f2;
+    padding: 1% 2%;
+}      
+
+
+
+
+  .Botones {
+    display: flex;
+    align-items: end;
+    position: relative;
+    gap: 7vh;
+    top: 1vh;
+    right: 3%;
+   
 }
 
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:  10px;
-    max-width: 300px;
+
+
+.BarraDeBusqueda {
+width: 80vh;
+height: 4.5vh;
+background-color: white;
+border: 2px solid ;
+border-radius: 1vh;
+  position: relative;
+  left: -9%;
+  padding: 0.5vh 0.7vh;
+ 
 }
 
 
-.logo {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    background: white;
-    transition: transform 0.2s ease;
+
+
+
+
+
+
+.BarraDeBusqueda::placeholder {
+  color: rgba(0, 0, 0, 0.5) ;      
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;                      
+  font-size: 4vh;    
+  line-height: 4.5vh;
 }
 
 
-.logo:hover {
-    transform: scale(1.05);
+
+
+
+
+.cuadradoAzul1 {
+  height: 85vh;
+  width: 100%;
+  background-color: #1B1464;
+}
+
+
+
+
+.listaProducto {
+  height: 19vh;
+  width: 80vh;
+  background-color: #D9D9D9;
+  border-radius: 4vh;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-family: 'Montserrat', sans-serif;    
+}
+
+.rayaAzul {
+    width: 0.9vh;
+    height: 19vh;
+    background-color: #1B1464;
+    position: absolute;
+    left: 23%;
+}
+
+.precio {
+position: absolute;
+top: -15%;
+left: 26%;
+font-weight: 800;
+font-size: 170%;
+}
+
+.nombreProducto {
+    position: absolute;
+    top: 24%;
+    left: 26%;
+    font-weight: medium;
+    font-size: 130%;
+}
+
+
+.cuadradoAzul2 {
+  height: 82vh;
+  width: 35vh;
+  background-color: #154ACF;
+  position: absolute;
+  right: 1.2vh;
+  top: 17vh;
+}
+
+
+
+
+.cuadradoAzul3{
+  height: 79vh;
+  width: 32vh;
+  background-color: #1B1464;
+  border-radius: 6.5vh;
+  position: absolute;
+  right: 4%;
+  top: 1%;
+}
+
+
+
+
+.finalizarCompra {
+  position: absolute;
+right: 6%;
+top: 82%;
+  width: 27vh;
+  height: 6vh;
+ border: 0.5vh solid #154ACF;
+border-radius: 6vh;
+  background-color: #051434;
+}
+
+
+
+
+
+
+
+
+.TextoFinalizarCompra {
+  position: absolute;
+  top: -7%;
+  right: 3%;
+  height: 10%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;          
+  font-size: 2.2vh;
+  letter-spacing: 0.2vh;
+  text-decoration: none; /* no funciona */
 }

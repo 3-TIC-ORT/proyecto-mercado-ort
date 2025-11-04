@@ -1,7 +1,18 @@
-.body {
+body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .header {
   background: #154ACF;
@@ -9,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1% 3%;
 
 
 
@@ -27,9 +38,9 @@
   display: flex;
   align-items: end;
   position: relative;
-  gap: 80px;
-  top: 5px;
-  right: 100px
+  gap: 8vh;
+  top: 5x;
+  right: 10vh
 }
 
 
@@ -40,15 +51,14 @@
 
 
 .BarraDeBusqueda {
-width: 700px;
-height: 45px;
+width: 80vh;
+height: 4.5vh;
 background-color: white;
 border: 2px solid ;
-border-radius: 10px;
+border-radius: 1vh;
 position: relative;
-left: -90px;
-padding: 5px 7px;
-
+left: -9vh;
+padding: 0.5vh 0.7vh;
 
 }
 
@@ -59,31 +69,22 @@ padding: 5px 7px;
 color: rgba(0, 0, 0, 0.5) ;      
 font-family: 'Montserrat', sans-serif;
 font-weight: 600;                      
-font-size: 40px;    
-line-height: 45px;
+font-size: 4vh;    
+line-height: 4.5vh;
 }
 
 
 
 
-.cart {
-  font-size: 40px;
-  cursor: pointer;
-}
-
-
-
-
-/* ---------- CUERPO ---------- */
 .CuadradoAzul {
-  width: 100vh;
-  height: 76.8vh;
+  width: 110vh;
+  height: 81vh;
   background-color: #2A4BA1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5px;
-  padding-top: 30px;
+  gap: none;
+  padding-top: 3vh;
     display: flex;
 flex-direction: column;
 align-items: center;
@@ -93,52 +94,23 @@ justify-content: space-evenly;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---------- CONTENEDORES DE PRODUCTOS ---------- */
 .ContenedorImagen1,
 .ContenedorImagen2,
 .ContenedorImagen3 {
   position: relative;
   display: inline-block;
   width: 100%;              
-right: 10px;
+right: 1%;
   position: relative;
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 800px;
-height: 530px;
-
+width: 80vh;
+height: 53vh;
 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Imagen base con el cuadro blanco */
 .ImagenGrupo {
   width: 100%;
   height: 100%;
@@ -146,53 +118,25 @@ height: 530px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .Lapicera {
 position: absolute;
 top: 18%;        
 left: 18%;        
-width: 140px;    
-height: 150px;
-object-fit: cover;  /* mantiene proporción sin recortar */
-border-radius: 10px;
+width: 14vh;    
+height: 15vh;
+object-fit: cover;
+border-radius: 1vh;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .Cartuchera {
 position: absolute;
 top: 18%;        
 left: 18%;        
-width: 140px;    
-height: 150px;
+width: 14vh;    
+height: 15vh;
 object-fit: contain;
-border-radius: 10px;
+border-radius: 1vh;
 }
 
 
@@ -210,10 +154,10 @@ border-radius: 10px;
 position: absolute;
 top: 18%;        
 left: 18%;        
-width: 140px;    
-height: 150px;
+width: 14vh;    
+height: 15vh;
 object-fit: contain;
-border-radius: 10px;
+border-radius: 1vh;
 }
 
 
@@ -252,42 +196,35 @@ border-radius: 10px;
 
 
 
-/* ---------- TEXTO ---------- */
-.Texto1 {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;    
-text-align: center;      
-width: 90%;
-padding: 10px;
- top: 30%;
- right: -11%;
+
+
+
+
+.Texto1 {    
+width: 30%;
+padding: 1vh;
+ top: 25%;
+ right: 10%;
  position: absolute;
    color: rgba(0, 0, 0,) ;      
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;                      
-font-size: 30px;    
+font-size: 3vh;    
 }
 
 
 
 
-.Texto2 {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;    
-text-align: center;      
-width: 90%;
-padding: 10px;
- top: 45%;
- right: -15%;
+.Texto2 {    
+width: 10%;
+padding: 1vh;
+ top: 40%;
+ right: 30%;
  position: absolute;
    color: rgba(0, 0, 0,) ;      
 font-family: 'Montserrat', sans-serif;
 font-weight: 700;                      
-font-size: 30px;    
+font-size: 3vh;    
 }
 
 
@@ -310,10 +247,10 @@ font-size: 30px;
 position: absolute;
 right: 10%;
 top: 75%;
-width: 583px;
-height: 70px;
-border: 4px solid #154ACF;
-border-radius: 60px;
+width: 58.3vh;
+height: 7.5vh;
+border: 0.5vh solid #154ACF;
+border-radius: 6vh;
 background-color: #051434;
 }
 
@@ -321,20 +258,20 @@ background-color: #051434;
 
 
 .TextoFinalizarCompra {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 15px;
-
-
-
-
+position: absolute;
+top: -30%;
+right: 5%;
+height: 10%;
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;          
-font-size: 20px;
-letter-spacing: 2px;
+font-size: 3vh;
+letter-spacing: 0.2vh;
 text-decoration: none; /* no funciona */
-padding: 10px 20px;
+padding: 1vh 1vh;
 }
+
+
+
+
 
 

@@ -4,36 +4,55 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="Inicio.css">
     </head>
     <body>
-        <p>
-            <img src="Group 5.png" alt="Logo">
-        </p>
-        <div>
-            <select name="Categorias" id="MenuCategorias">
-                <option selected disabled="">categorias</option>
-                <option value="">ejemplo</option>
-                <option value="">ejemplo</option>
-            </select>
+       <header class="header">
+        <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo"></img> </a>
+        <input type="text" id="Búsqueda" class="BarraDeBusqueda" name="Búsqueda" placeholder="Buscar productos" required>
+       
+        <div class="Botones">
+         <div class="user">
+            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png" ></a></div>
+         <div class="favoritos">
+            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png"></a></div>
+         <div class="cart">
+            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt=""></a></div>
         </div>
-        <div>   
-         <input type="text" placeholder="Buscar" id="Barra de busqueda" class="Barra de busqueda">
-         <select name="Filtro" id="MenuFiltro">
-            <option selected disabled>Filtro</option>
-            <option value="">Utiles</option>
-            <option value="">Libro</option>
+      </header>
+       
+      <div class="cuadradAzul">
+       <div class="ambosFilterContainer">
+        <section class="filterContainer1">
+        <label for="filtroCategoria">Categorias</label>
+         <select name="" id="filtroCategoria" class="despegableCategoria">
+            <option value="">Utiles escolares</option>
+            <option value="">Cuadernos</option>
+            <option value="">Mochilas</option>
+            <option value="">Carpetas</option>
+            <option value="">Hojas</option>
          </select>
-    </div>
-    <a href="">🛒Carrito</a>
-    <a href="">🤍Favoritos</a>
-    <a href="">👤Cuenta</a>
-    <a href="">Publicaciones</a>
-    <div>
-        <nav class="Filtro Principal">
-            <li><a href="#">Filtro</a></li>
-            <li><a href="#">Utiles ▼</a>
-             <ul class="Menu de Utiles"></ul></li>
-        </nav>
-    </div>
+       </section>
+
+
+
+
+       <section class="filterContainer2">
+        <select name="" id="filtroAño" class="despegableAño">
+            <option value="">1 año</option>
+            <option value="">2 año</option>
+            <option value="">3 año</option>
+            <option value="">4 año</option>
+            <option value="">5 año</option>
+        </select>
+       </section>
+       </div>
+
+
+
+
+       <section> usar la barra de busqueda del tp2 de avanzado front para el filtro de rango de precio</section>
+      </div>
+   
 </body>
 </html>
