@@ -93,15 +93,15 @@ function modificarFavoritos(favorito)
       else
       {
        let favoritosNuevo = [];
-       console.log(listaDeUsuarios.favoritos.length);
-       for (let i = 0; i < listaDeUsuarios.favoritos.length; i++)
+       console.log(listaDeUsuarios[i].favoritos.length);
+       for (let j = 0; j < listaDeUsuarios[i].favoritos.length; j++)
        {  
-        if (listaDeUsuarios.favoritos[i] !== favorito.idProducto)
+        if (listaDeUsuarios[i].favoritos[j] !== favorito.idProducto)
         {
-            favoritosNuevo.push(listaDeUsuarios.favoritos[i]);
+            favoritosNuevo.push(listaDeUsuarios[i].favoritos[j]);
         }
        }
-       listaDeUsuarios.favoritos = favoritosNuevo;
+       listaDeUsuarios[i].favoritos = favoritosNuevo;
        fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
        return false
       }

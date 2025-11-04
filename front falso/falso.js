@@ -4,7 +4,7 @@ let botonRegistrarse = document.getElementById ("botonRegistro")
 let botonIniciarSesion = document.getElementById ("botonLogin")
 let botonLapicera = document.getElementById ("lapicera")
 let botonCuaderno = document.getElementById ("cuaderno")
-let agregar;
+let agregar = false;
 connect2Server(3000); 
 
 botonRegistrarse.addEventListener("click", function() {
@@ -35,9 +35,10 @@ alert(respuesta);
 botonLapicera.addEventListener("click", function() {
 
     postEvent("modificarFavorito", {idUsuario: 2, idProducto: 7, modificar: agregar}, function(respuesta) {
+    console.log("Hola");
     if(respuesta)
     {
-     agregar = false;
+      agregar = false;
     }
     else
     {
