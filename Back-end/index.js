@@ -1,12 +1,11 @@
 import fs from "fs";
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
-let respuesta;
+let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
 
 //registro
 function registrarse(usuario)
 {
 let ok;   
-let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
 usuario.id = listaDeUsuarios.length;
 
 //recorre la lista de usuarios para comparar si la cuenta ya existe o los atributos están en uso
@@ -51,7 +50,6 @@ for (let i = 0; i <= listaDeUsuarios.length; i++)
 function login(usuario)
 {
  let ok;   
-let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
 
 //recorre la lista
 for (let i = 0; i <= listaDeUsuarios.length; i++) 
@@ -78,7 +76,6 @@ if (i === listaDeUsuarios.length)
 //parametro favorito: {idUsuario: 2, idProducto: 7, modificar: true/false}
 function modificarFavoritos(favorito)
 {
-  let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
   for (let i = 0; i < listaDeUsuarios.length; i++)
   {
     if(favorito.idUsuario === listaDeUsuarios[i].id)
@@ -93,7 +90,6 @@ function modificarFavoritos(favorito)
       else
       {
        let favoritosNuevo = [];
-       console.log(listaDeUsuarios[i].favoritos.length);
        for (let j = 0; j < listaDeUsuarios[i].favoritos.length; j++)
        {  
         if (listaDeUsuarios[i].favoritos[j] !== favorito.idProducto)
@@ -101,10 +97,22 @@ function modificarFavoritos(favorito)
             favoritosNuevo.push(listaDeUsuarios[i].favoritos[j]);
         }
        }
+       console.log(listaDeUsuarios[i].favoritos.length);
        listaDeUsuarios[i].favoritos = favoritosNuevo;
        fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
        return false
       }
+    }
+  }
+}
+
+function Favoritos(id)
+{
+  for (let i = 0; i < listaDeUsuarios.length; i++)
+  {
+    if(listaDeUsuarios[i].id === id)
+    {
+      return listaDeUsuarios[i].favoritos;
     }
   }
 }
