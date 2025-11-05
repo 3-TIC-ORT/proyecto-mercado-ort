@@ -4,48 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Usuario Info</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
-    <link rel="stylesheet" href="registrese.css">
   <link rel="stylesheet" href="usuarioinfo.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="Logo"></div><a href="../Inicio/Inicio.html">  <img src="Group 70.png" class="Logo"></img> </a>
-    <label for="Búsqueda"></label><br>
-    <input type="text" id="Búsqueda" name="Búsqueda" placeholder="Busca otros productos" required>
-    <div class="user"><a href="../usuarioinfo/usuario.html"> <img src="Group 71.png" ></a></div>
-    <div class="favoritos" ><a href="../Favoritos/Favoritos.html"> <img src="Group 72.png"></a></div>
+    <div class="logo">
+      <a href="../Inicio/Inicio.html">
+        <img src="Group 70.png" class="logo">
+      </a>
+    </div>
+    <input type="text" id="Búsqueda" placeholder="Busca otros productos" required>
+    <div class="user"><a href="../usuarioinfo/usuario.html"><img src="Group 71.png"></a></div>
+    <div class="favoritos"><a href="../Favoritos/Favoritos.html"><img src="Group 72.png"></a></div>
     <div class="cart"><a href="../pantalla del carrito/pantalladelcarrito.html"><img src="Group 73.png"></a></div>
   </header>
 
-  <div class="Fondo">
-    <h1 class="titulo"> Registrese </h1>
-     <div class="CuadradoGris">
-       
-       <div class="CuadradoAzul1"></div>
-       <div class="CuadradoAzul"><img src="Group 66.png"  height="55vh" class="Logo"></div>
-       <div class="Formulario">
-      
-    <input type="text"PlaceHolder="Nombre" id="CajaDeNombre" class="BotonDeNombre"  required>
-    <input type="text"PlaceHolder="Apellido" id="CajaDeApellido" class="BotonDeApellido" required>
-    <input type="text"PlaceHolder="DNI" id="CajaDeDNI" class="BotonDeDNI" required>
-    <input type="email"PlaceHolder="Mail" id="CajaDeMail" class="BotonDeMail" required>
-    <input type="text"PlaceHolder="Contraseña" id="CajaDeContraseña" class="BotonDeContraseña" required>
-    <input type="text"PlaceHolder="Repetir Contraseña" id="CajaDeContraseña2" class="BotonDeContraseña2" required>
+  <div class="CuadroPerfil">
+    <div class="BarraPerfil">
+      <span class="titulo-perfil"><img src="Group 85.png" alt="titulo-perfil"></span>
+      <button class="btn-cerrar"><img src="Group 84.png" alt="btn-cerrar"></button>
+      <button id="botonEditar" class="btn-editar"><img src="Frame 46.png" alt="btn-editar"></button>
+    </div>
 
-    
-        <button id="BotondeRegistrar" class="BotonDeRegistrar"> REGISTRARSE </button>
-        
-        <div  class="BotonError" id="BotonError" style="display: none;"> 
-         <p id="MensajeDeError"  style="display: none;" >  ERROR: <br>DNI o contraseña incorrecta</p>
-        </div>
-     </div>
-   </div>
+    <div class="Formulario">
+      <div class="dato">
+        <label>Curso:</label>
+        <span id="cursoTexto">5to Año</span>
+        <input type="text" id="cursoInput" class="BotonDeCurso" style="display: none;">
+      </div>
+
+      <div class="dato">
+        <label>Orientación:</label>
+        <span id="orientacionTexto">Informática</span>
+        <input type="text" id="orientacionInput" class="BotonDeOrientación" style="display: none;">
+      </div>
+    </div>
+
+    <button class="BotonDeRegistrar">REGISTRARSE</button>
   </div>
 
-  <script src="registrese.js"></script>
+  <script src="usuarioinfo.js"></script>
 </body>
 </html>
-
