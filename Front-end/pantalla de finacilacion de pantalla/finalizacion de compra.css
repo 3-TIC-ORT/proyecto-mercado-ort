@@ -1,27 +1,21 @@
 .header {
-    background: #154ACF;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 2%;
+  background: #154ACF;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
 }      
 
-
-
-
-  .Botones {
-    display: flex;
-    align-items: end;
-    position: relative;
-    gap: 7vh;
-    top: 1vh;
-    right: 3%;
-   
+.Botones {
+  display: flex;
+  align-items: end;
+  position: relative;
+  gap: 7vh;
+  top: 1vh;
+  right: 3%;
+ 
 }
-
-
-
 
 .BarraDeBusqueda {
 width: 80vh;
@@ -29,128 +23,250 @@ height: 4.5vh;
 background-color: white;
 border: 2px solid ;
 border-radius: 1vh;
-  position: relative;
-  left: -9%;
-  padding: 0.5vh 0.7vh;
- 
+position: relative;
+left: -9%;
+padding: 0.5vh 0.7vh;
+background-image: url('Lupa.png');
+background-repeat: no-repeat;
+background-size: 4vh;
+background-position: 97% center;
+
+
 }
-
-
-
-
-
-
 
 
 .BarraDeBusqueda::placeholder {
-  color: rgba(0, 0, 0, 0.5) ;      
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;                      
-  font-size: 4vh;    
-  line-height: 4.5vh;
+color: rgba(0, 0, 0, 0.5) ;      
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;                      
+font-size: 4vh;    
+line-height: 4.5vh;
 }
-
-
-
-
-
 
 .cuadradoAzul1 {
-  height: 85vh;
-  width: 100%;
-  background-color: #1B1464;
+height: 85vh;
+width: 100%;
+background-color: #1B1464;
 }
-
-
 
 
 .listaProducto {
-  height: 19vh;
-  width: 80vh;
-  background-color: #D9D9D9;
-  border-radius: 4vh;
-  position: absolute;
-  top: 20%;
-  left: 5%;
-  font-family: 'Montserrat', sans-serif;    
+height: 19vh;
+width: 80vh;
+background-color: #D9D9D9;
+border-radius: 4vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+position: absolute;
+top: 20%;
+left: 5%;
+font-family: 'Montserrat', sans-serif;    
+overflow: hidden;
+}
+
+
+.imagenContainer  {
+  width: 23%;  
+height: 100%;
+border-radius: 10px;
+overflow: hidden;
+}
+
+
+
+
+.listaProducto:hover {
+transform: translateY(-7px);
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.imagenProducto {
+  width: 100%;
+  height: 100%;
+object-fit: cover;
 }
 
 .rayaAzul {
-    width: 0.9vh;
-    height: 19vh;
-    background-color: #1B1464;
-    position: absolute;
-    left: 23%;
+  width: 0.9vh;
+  height: 19vh;
+  background-color: #1B1464;
+  position: absolute;
+  left: 23%;
 }
+
+
+
 
 .precio {
 position: absolute;
-top: -15%;
+top: -13%;
 left: 26%;
 font-weight: 800;
-font-size: 170%;
+font-size: 160%;
 }
 
+
+
+
 .nombreProducto {
-    position: absolute;
-    top: 24%;
-    left: 26%;
-    font-weight: medium;
-    font-size: 130%;
+  position: absolute;
+  top: 20%;
+  left: 26%;
+font-weight: medium;
+font-size: 130%;
 }
+
+
+
+
+.descripcionProducto {
+  position: absolute;
+  top: 40%;
+  left: 26%;
+font-weight: medium;
+font-size: 130%;
+}
+
+
+
+
+.MetodosDePago {
+width: 20%;
+height: 20%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 7vh;
+position: absolute;
+top: 47%;
+right: 27%;
+margin: 0 auto;
+}
+
+
+
+.BotonPago {
+width: 125%;
+height: 140%;
+background-color: #1B1464;
+border-radius: 4vh;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+
+
+background-image: url(Frame\ 13.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.BotonPago:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+
+.BotonPago img {
+width: 70%;
+height: auto;
+}
+
+.BotonPago.seleccionado:hover {
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.MetodoDePagoTexto {
+width: 70%;
+height: auto;
+position: absolute;
+top: 25%;
+right: -24%;
+font-family: 'Montserrat', sans-serif;
+font-size: 4vh;
+font-size: 1000;
+color: white;
+}
+
 
 
 .cuadradoAzul2 {
-  height: 82vh;
-  width: 35vh;
-  background-color: #154ACF;
-  position: absolute;
-  right: 1.2vh;
-  top: 17vh;
+height: 82vh;
+width: 35vh;
+background-color: #154ACF;
+position: absolute;
+right: 1.2vh;
+top: 17vh;
 }
 
-
-
-
-.cuadradoAzul3{
-  height: 79vh;
-  width: 32vh;
-  background-color: #1B1464;
-  border-radius: 6.5vh;
-  position: absolute;
-  right: 4%;
-  top: 1%;
+.cuadradoAzul3 {
+height: 79vh;
+width: 32vh;
+background-color: #1B1464;
+border-radius: 6.5vh;
+position: absolute;
+right: 4%;
+top: 1%;
 }
 
+.TextoResumenCompra {
+height: 63vh;
+width: 32vh;
+background-color: red;
+border-radius: 6.5vh;
+position: absolute;
+right: 0.5%;
+top: -0.1%;
+}
 
+.TituloResumen {
+position: absolute;
+right: 73%;
+width: 1%;
+height: 1%;
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;          
+font-size: 3.2vh;
+color: white;
+}
 
+.TextoCompra {
+  position: absolute;
+  top: 10%;
+  right: 60%;
+  width: 70%;
+  height: 0.1%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;          
+  font-size: 2.5vh;
+  color: white;
+  }
 
 .finalizarCompra {
-  position: absolute;
+position: absolute;
 right: 6%;
 top: 82%;
-  width: 27vh;
-  height: 6vh;
- border: 0.5vh solid #154ACF;
+width: 27vh;
+height: 6vh;
+border: 0.5vh solid #154ACF;
 border-radius: 6vh;
-  background-color: #051434;
+background-color: #051434;
 }
-
-
-
-
-
-
 
 
 .TextoFinalizarCompra {
-  position: absolute;
-  top: -7%;
-  right: 3%;
-  height: 10%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;          
-  font-size: 2.2vh;
-  letter-spacing: 0.2vh;
-  text-decoration: none; /* no funciona */
+position: absolute;
+top: -7%;
+right: 3%;
+height: 10%;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;          
+font-size: 2.2vh;
+letter-spacing: 0.2vh;
+text-decoration: none; /* no funciona */
 }

@@ -1,26 +1,26 @@
 .header {
-    background: #154ACF;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh 4vh;
+  background: #154ACF;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 4vh;
 
 
 
 
-  }
+}
 
 
 
 
-  .Botones {
-    display: flex;
-    align-items: end;
-    position: relative;
-    gap: 8vh;
-    top: 5x;
-    right: 10vh
+.Botones {
+  display: flex;
+  align-items: end;
+  position: relative;
+  gap: 8vh;
+  top: 5x;
+  right: 10vh
 }
 
 
@@ -36,35 +36,35 @@ height: 4.5vh;
 background-color: white;
 border: 2px solid ;
 border-radius: 1vh;
-  position: relative;
-  left: -9vh;
-  padding: 0.5vh 0.7vh;
- 
+position: relative;
+left: -9vh;
+padding: 0.5vh 0.7vh;
+
 }
 
 
 
 
 .BarraDeBusqueda::placeholder {
-  color: rgba(0, 0, 0, 0.5) ;      
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;                      
-  font-size: 4vh;    
-  line-height: 4.5vh;
+color: rgba(0, 0, 0, 0.5) ;      
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;                      
+font-size: 4vh;    
+line-height: 4.5vh;
 }
 
 
 
 
 .cuadradAzul {
- width: 15vw;
- height: 77vh;
- background-color: #154ACF;
- border-radius: 1vw;
- gap: 0.05vh;
- padding-top: 3vh;
-     position: absolute;
-     top: 18vh;
+width: 15vw;
+height: 77vh;
+background-color: #154ACF;
+border-radius: 1vw;
+gap: 0.05vh;
+padding-top: 3vh;
+   position: absolute;
+   top: 18vh;
 }
 
 
@@ -76,8 +76,8 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
- 
+font-weight: 600;
+
 }
 
 

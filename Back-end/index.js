@@ -76,6 +76,11 @@ if (i === listaDeUsuarios.length)
 }
 }
 
+function ProductosPublicados()
+{
+  return listaDeProductos;
+}
+
 //producto{idUsuario, idProducto, nombre, precio, imagenes, descripcion}
 function publicarProducto(producto)
 {
@@ -127,6 +132,7 @@ function Favoritos(id)
   }
 }
 
+subscribeGETEvent("productosPublicados", ProductosPublicados);
 subscribePOSTEvent("registro", registrarse);
 subscribePOSTEvent("inicioSesion", login);
 subscribePOSTEvent("publicar", publicarProducto);
