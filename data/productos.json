@@ -1,0 +1,10 @@
+[
+  {
+    "idUsuario": 2,
+    "idProducto": 7,
+    "nombre": "lapicera",
+    "precio": 100,
+    "imagenes": "links",
+    "descripcion": "texto"
+  }
+]

@@ -2,13 +2,13 @@ let usuario = document.getElementById ("usuario");
 let contraseña = document.getElementById ("contraseña");
 let botonRegistrarse = document.getElementById ("botonRegistro");
 let botonIniciarSesion = document.getElementById ("botonLogin");
-let botonLapicera = document.getElementById ("lapicera");
+let FavoritoLapicera = document.getElementById ("lapiceraFav");
+let PublicarLapicera = document.getElementById ("lapiceraPubli");
 let botonCuaderno = document.getElementById ("cuaderno");
 let botonFavoritos = document.getElementById ("botonFavoritos");
 let parrafoFavoritos = document.getElementById ("textoFavoritos");
-let agregar = false;
 let id;
-let a = 1;
+
 connect2Server(3000);
 //PIDO EL USUARIO AL BACK. CASI SEGURO QUE ESTA MAL YA QUE EL FRONT ES QUIEN LO TENDRÍA QUE SABER:
 /*getEvent("idDelUsuario", function(respuesta) {
@@ -38,11 +38,18 @@ alert(respuesta);
 
 
 
-function Lapicera() {
-  postEvent("modificarFavorito", {idUsuario: 2, idProducto: 7, modificar: agregar}, function(respuesta) {
+function LapiceraFav() {
+  postEvent("modificarFavorito", {idUsuario: 2, idProducto: 7, modificar: false}, function(respuesta) {
   console.log("Hola");
   });
   }
+  
+function LapiceraPubli() {
+  postEvent("publicar", {idUsuario: 2, idProducto: 7, nombre: "lapicera", precio: 100, imagenes: "links", descripcion: "texto"}, function(respuesta) {
+  console.log("Hola");
+  });
+  }
+
 
 
 
@@ -60,9 +67,11 @@ function Lapicera() {
       });
      
   }
+  
   botonRegistrarse.addEventListener("click", Registro);
   botonIniciarSesion.addEventListener("click", InicioSesion);
-  botonLapicera.addEventListener("click", Lapicera);
+  FavoritoLapicera.addEventListener("click", LapiceraFav);
+  PublicarLapicera.addEventListener("click", LapiceraPubli);
   botonCuaderno.addEventListener("click", Cuaderno);
   botonFavoritos.addEventListener("click", Favorito);
 

@@ -1,8 +1,10 @@
 import fs from "fs";
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
-let listaDeUsuarios = JSON.parse(fs.readFileSync("./Back-end/usuarios.json", "utf8"));
+let listaDeUsuarios = JSON.parse(fs.readFileSync("./data/usuarios.json", "utf8"));
+let listaDeProductos = JSON.parse(fs.readFileSync("./data/productos.json", "utf8"));
 
 //registro
+//Usuario{id, user, apellido, dni, mail, contraseña, favoritos, carrito, productosPublicados}
 function registrarse(usuario)
 {
 let ok;   
@@ -36,7 +38,7 @@ for (let i = 0; i <= listaDeUsuarios.length; i++)
         if (i === listaDeUsuarios.length)
         {
          listaDeUsuarios.push(usuario);
-         fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+         fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
          i = listaDeUsuarios.length + 1;
          ok = true;
          return 0;
@@ -73,6 +75,14 @@ if (i === listaDeUsuarios.length)
 }
 }
 }
+
+//producto{idUsuario, idProducto, nombre, precio, imagenes, descripcion}
+function publicarProducto(producto)
+{
+  listaDeProductos.push(producto);
+  fs.writeFileSync("./data/productos.json", JSON.stringify(listaDeProductos, null, 2));
+
+}
 //parametro favorito: {idUsuario: 2, idProducto: 7, modificar: true/false}
 function modificarFavoritos(favorito)
 {
@@ -83,7 +93,7 @@ function modificarFavoritos(favorito)
       if(favorito.modificar)
       {
        listaDeUsuarios[i].favoritos.push(favorito.idProducto);
-       fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+       fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
        console.log(listaDeUsuarios[i].favoritos);
        return true;
       }
@@ -97,9 +107,9 @@ function modificarFavoritos(favorito)
             favoritosNuevo.push(listaDeUsuarios[i].favoritos[j]);
         }
        }
-       console.log(listaDeUsuarios[i].favoritos.length);
        listaDeUsuarios[i].favoritos = favoritosNuevo;
-       fs.writeFileSync("./Back-end/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+       fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+       console.log(listaDeUsuarios[i].favoritos.length);
        return false
       }
     }
@@ -119,6 +129,7 @@ function Favoritos(id)
 
 subscribePOSTEvent("registro", registrarse);
 subscribePOSTEvent("inicioSesion", login);
+subscribePOSTEvent("publicar", publicarProducto);
 subscribePOSTEvent("modificarFavorito", modificarFavoritos);
 
 startServer(3000, true);
