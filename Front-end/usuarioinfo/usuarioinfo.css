@@ -19,7 +19,7 @@
 #Búsqueda {
   width: 520px;
   padding: 10px 14px;
-  border-radius: 0px;
+  border-radius: 16px;
   border: 1px solid #cec8c8;
   font-size: 14px;
   outline: none;
@@ -62,12 +62,6 @@ margin-left: 15px;
 }
 
 
-
-
-
-
-
-
 .Fondo {
   display: flex;
   justify-content: center;
@@ -83,7 +77,6 @@ margin-left: 15px;
   overflow: hidden;
 }
 
-/* ---- Barra azul ---- */
 .CuadradoAzul1 {
   display: flex;
   justify-content: space-between;
@@ -98,15 +91,45 @@ margin-left: 15px;
 .botones-superior {
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 
-.btn-cerrar,
-.btn-editar {
+.btn-cerrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
   border: none;
-  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.btn-cerrar img {
+  width: 295px;   
+  height: 35px;  
+  object-fit: contain;
+  align-items: center;
+}
+
+.btn-editar {
+  background-color: #1B1464;
+  color: white;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
+  padding: 8px 16px; 
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-editar :hover {
+  width: 200px;
+  height: 65px;
+  object-fit: contain;
+  align-items: center;
+
 }
 
 .btn-cerrar {
