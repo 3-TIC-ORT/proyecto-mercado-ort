@@ -68,99 +68,112 @@ margin-left: 15px;
 
 
 
-.CuadradoGris {
+.Fondo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
-  height: 50vh;
-  max-width: 900px;
-  background-color: #f7f7f7;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.CuadradoGris {
+  width: 80%;
+  max-width: 950px;
+  background: #f7f7f7;
   border: 2px solid #1B1464;
-  border-radius: 12px;
-  margin: 100px auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 5px;
   overflow: hidden;
 }
 
+/* ---- Barra azul ---- */
 .CuadradoAzul1 {
-  width: 100%;
-  background-color: #154acf;
-  height:  85px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  align-items: center;
+  background-color: #154acf;
+  padding: 15px 30px;
   color: white;
   font-weight: bold;
   font-size: 20px;
 }
 
-.CuadradoAzul1 button {
-  background-color: #1B1464;
-  color: white;
+.botones-superior {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-cerrar,
+.btn-editar {
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.CuadradoAzul1 button:hover {
-  background-color: #0d093d;
-}
-
-.miperfil {
-  
-background-color: #154acf;
-padding: 3px 5px ;
-justify-content: left;
-align-items: left;
-left: 20%;
-}
-
-
-
-.BotonEditar {
-  background-color: #1B1464;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px 20px;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 6px;
 }
 
-.BotonEditar:hover {
-  background-color: #0e093d;
+.btn-cerrar {
+  background-color: white;
+  color: #1B1464;
 }
 
+.btn-editar {
+  background-color: #1B1464;
+  color: white;
+}
 
-.Formulario {
-  width: 90%;
-  margin-top: 30px;
+/* ---- Contenido del perfil ---- */
+.PerfilContenido {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 50px;
+  gap: 40px;
 }
 
-.dato {
+.PerfilIzquierda {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  font-size: 16px;
-  color: #1B1464;
-  width: 40%;
+  align-items: center;
+  gap: 15px;
 }
 
-.dato label {
+.FotoPerfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 3px solid #1B1464;
+}
+
+.PerfilIzquierda input {
+  border: none;
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
+  background: transparent;
+  color: black;
 }
 
+/* ---- Datos a la derecha ---- */
+.PerfilDerecha {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
 
+.PerfilDerecha label {
+  font-weight: bold;
+  color: #1B1464;
+}
 
+.PerfilDerecha input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  color: #333;
+}
 
+.PerfilDerecha input:focus {
+  border-color: #154acf;
+}
