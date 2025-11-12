@@ -93,6 +93,21 @@ border: black;
 border-radius: 1vh;
 }
 
+.Categoria{
+  font-size: 4vh;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+.Categoria:hover{
+text-decoration: underline;
+}
+
+.oculto{
+  display: none;
+}
 
 .filterContainer2  {
 width: 10vw;
@@ -112,37 +127,57 @@ border: 25vw black
   width: 80%;
   flex-wrap: wrap;
   background-color: white;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 3vh;
   padding: 1vh;
 position: absolute;
-top: 16.5%;
+top: 16.7%;
 right: 1%;
 }
 
 
 .productos{
+  position: relative;
+  top: -10%;
   border: 3px solid #1B1464;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: white;
-  width: 18vw;
+  width: 19vw;
   height: 60vh;
-  
+
 }
 
-.categoria{
-  display: flex;
-  color: red;
-  justify-content: center;
-  align-items: center;
+.titulos{
+position: absolute;
+top: 66%;
+color: white;
+font-weight: bold;
+font-size: 28px
 }
 
-.cuadradoAzulProducto{
+.valoracion{
+position: absolute;
+top: 88%;
+left: 2%;
+color: white;
+font-weight: 400;
+}
+
+
+.cuadradoAzulProducto1{
   position: absolute;
-  top: 62%;
+  top: 73%;
   background-color: #1B1464;
-  border-radius: 10px;
-  width: 18vw;
-  height: 18vh;
+  border-radius: 28px;
+  width: 19vw;
+  height: 16.3vh;
+}
+
+.cuadradoAzulProducto2{
+  position: absolute;
+  top: 73%;
+  background-color: #1B1464;
+  width: 19vw;
+  height: 14vh;
 }
