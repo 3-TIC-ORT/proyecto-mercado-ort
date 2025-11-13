@@ -1,3 +1,6 @@
+
+
+
 const btnEditar = document.getElementById("btnEditar");
 let CursoInput = document.getElementById("curso");
 let editando = false;
@@ -22,3 +25,8 @@ btnEditar.addEventListener("click", () => {
     editando = false;
   }
 });
+
+
+
+
+
