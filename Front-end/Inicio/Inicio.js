@@ -66,3 +66,56 @@ let productos =[];
 
 
   MostrarProductos(lista);
+
+
+
+
+
+  //MATI, ESTO QUE VOY A PONER ABAJO ES DE VICEN, ESTOY PROBANDO A VER SI FUNCIONA 
+  //LA BARRA DE BUSQUEDA, NO TE PREOCUPES NO TE BORRE NADA.
+
+  
+// 1) Traigo los productos del backend
+getEvent("productosPublicados", function(productos) {
+
+    const inputBusqueda = document.getElementById("Búsqueda");
+    const contenedor = document.getElementById("contenedor-productos");
+
+    // Mostrar todos de entrada
+    mostrarProductos(productos);
+
+    // 2) Cada vez que escribís, filtra
+    inputBusqueda.addEventListener("input", function() {
+
+        let texto = inputBusqueda.value.toLowerCase();
+
+        let filtrados = productos.filter(p =>
+            p.nombre.toLowerCase().includes(texto) ||
+            p.descripcion.toLowerCase().includes(texto)
+        );
+
+        mostrarProductos(filtrados);
+
+    });
+
+    // Función que dibuja tarjetas
+    function mostrarProductos(lista) {
+        contenedor.innerHTML = "";
+
+        lista.forEach(p => {
+
+            let card = document.createElement("div");
+            card.classList.add("tarjeta-producto");
+
+            card.innerHTML = `
+                <img src="${p.imagenes}" class="img-producto">
+                <h3>${p.nombre}</h3>
+                <p>$${p.precio}</p>
+                <button onclick="verProducto(${p.idProducto})">Ver</button>
+            `;
+
+            contenedor.appendChild(card);
+        });
+    }
+});
+

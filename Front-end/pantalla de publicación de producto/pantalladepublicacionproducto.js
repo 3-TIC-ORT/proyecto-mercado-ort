@@ -46,12 +46,30 @@ function enviarProducto(producto) {
 
 
 
-document.querySelector(".upload-box").addEventListener("click", () => {
-    document.getElementById("imagenPrincipal").click();
-  });
-  
+const uploadBox = document.querySelector(".upload-box");
+const inputFile = document.getElementById("imagenPrincipal");
 
-  document.getElementById("publicarproducto").addEventListener("click", () => {
-    alert(" Tu producto fue publicado con éxito!");
-  });
-  
+// Abrir selector de archivo
+uploadBox.addEventListener("click", () => {
+  inputFile.click();
+});
+
+// Cuando el usuario elige una imagen
+inputFile.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    uploadBox.style.backgroundImage = `url(${reader.result})`;
+    uploadBox.style.backgroundSize = "cover";
+    uploadBox.style.backgroundPosition = "center";
+    uploadBox.textContent = ""; // borra el texto "SUBIR IMÁGENES"
+  };
+  reader.readAsDataURL(file);
+});
+
+// Botón publicar
+document.getElementById("publicarproducto").addEventListener("click", () => {
+  alert("Tu producto fue publicado con éxito!");
+});

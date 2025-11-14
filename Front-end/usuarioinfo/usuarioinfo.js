@@ -1,5 +1,24 @@
+// --- UPLOAD IMAGEN PERFIL ---
+const uploadBox = document.getElementById("uploadbox");
+const inputFile = document.getElementById("imagenPrincipal");
 
+uploadBox.addEventListener("click", () => {
+  inputFile.click(); // abrir selector
+});
 
+inputFile.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    uploadBox.style.backgroundImage = `url(${reader.result})`;
+    uploadBox.style.backgroundSize = "cover"; // ver imagen completa
+    uploadBox.style.backgroundRepeat = "center";
+    uploadBox.style.backgroundPosition = "no-repeat";
+  };
+  reader.readAsDataURL(file);
+});
 
 const btnEditar = document.getElementById("btnEditar");
 let CursoInput = document.getElementById("curso");
