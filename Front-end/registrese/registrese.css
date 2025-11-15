@@ -22,6 +22,8 @@
 
 
 .titulo {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  font-weight: 1000;
   position: absolute;
   top: 3%;            
   left: 50%;
@@ -30,6 +32,7 @@
   font-size: 40px;
   margin: 0;
   margin-bottom: 30px;
+  
 }
 
 
@@ -85,20 +88,21 @@ align-items: left;
   flex-wrap: wrap;
   flex-direction: row;
 
-  gap: 15px;
+  gap: 12px;
   position: absolute;
   top: 27%;
   justify-self: center;
    position: absolute;
-  top: 27%;
+  top: 24%;
   left: 3%; 
   right: 10%;
 }
 
 .BotonDeNombre,
 .BotonDeApellido,
-.BotonDeDNI,
 .BotonDeMail,
+.BotonDeCurso,
+.BotonDeOrientación,
 .BotonDeContraseña,
 .BotonDeContraseña2  {
   width: 60%;
@@ -115,8 +119,9 @@ align-items: left;
 
 .BotonDeNombre::placeholder,
 .BotonDeApellido::placeholder,
-.BotonDeDNI::placeholder,
 .BotonDeMail::placeholder,
+.BotonDeCurso::placeholder,
+.BotonDeOrientación::placeholder,
 .BotonDeContraseña::placeholder,
 .BotonDeContraseña2::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -124,7 +129,7 @@ align-items: left;
 }
 
 .BotonDeRegistrar {
-  width: 17vw;
+  width: 20vw;
   height: 45px;
   border-radius: 10px;
   color: #1B1464;

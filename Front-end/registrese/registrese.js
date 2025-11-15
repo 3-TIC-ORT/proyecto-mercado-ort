@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const mensajeError = document.getElementById("MensajeDeError");
   const nombre = document.getElementById("CajaDeNombre");
   const apellido = document.getElementById("CajaDeApellido");
-  const dni = document.getElementById("CajaDeDNI");
+  const curso = document.getElementById("CajaDeCurso");
+  const orientación = document.getElementById(CajaDeOrientación);
   const mail = document.getElementById("CajaDeMail");
   let idUsuario;
 
@@ -17,13 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); 
     const nombreValor = nombre.value.trim();
     const apellidoValor = apellido.value.trim();
-    const dniValor  = dni.value.trim();
+    const cursoValor  = curso.value.trim();
+    const orientaciónValor = orientación.value.trin();
     const mailValor = mail.value.trim();
     const pass1 = contraseña1.value.trim();
     const pass2 = contraseña2.value.trim();
 
     
-    if (nombreValor === "" || apellidoValor === "" || dniValor === "" || mailValor === "" || pass1 === "" || pass2 === "") {
+    if (nombreValor === "" || apellidoValor === "" || cursoValor === "" || orientaciónValor === ""|| mailValor === "" || pass1 === "" || pass2 === "") {
       mensajeError.textContent = "ERROR: ASEGÚRESE DE COMPLETAR TODOS LOS CAMPOS";
       idUsuario ++;
       console.log(idUsuario);
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       divError.style.display = "none";
       mensajeError.style.display = "none";
-      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, dni: dniValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: 0}, function(respuesta) {
+      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, curso: cursoValor, orientación: orientaciónValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: 0}, function(respuesta) {
       if(respuesta === 0)
       {
         window.location.href = "../Inicio/Inicio.html";
