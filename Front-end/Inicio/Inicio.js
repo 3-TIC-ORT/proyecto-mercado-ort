@@ -1,121 +1,215 @@
-fetch('productos.json')          // Ruta al archivo JSON
-  .then(response => response.json())  // Convertir la respuesta en JSON
-  .then(data => {                     // Aquí tienes acceso al JSON en formato de objeto JS
-    console.log('Comidas cargadas desde JSON:');
-    console.log(data);    
-    comidas = data;                   // Asignar el JSON a la variable comidas
-    MostrarComidas(comidas);
-  })
-  .catch(error => {                   // Manejo de errores al leer el archivo JSON
-    console.error('Error al leer el archivo JSON:', error);
+const tituloCategoria = document.querySelector(".Categoria");
+const filtroCategoria = document.getElementById("filtroCategoria");
+const filtroAño = document.getElementById("añoLabel");
+
+
+if (tituloCategoria && filtroCategoria) {
+  tituloCategoria.addEventListener("click", () => {
+    filtroCategoria.classList.toggle("oculto");
+  });
+}
+
+
+const ProductosContainer = document.getElementById("Productos-container");
+
+
+// JSON de productos con precios de a pares
+const lista = [  
+  { nombre: "lapiz", categoria: "Utiles escolares", valoracion: "5", año: "1", Imagen: "imagen", precio: 500 },  
+  { nombre: "Mochila negra", categoria: "Mochilas", valoracion: "3", año: "1", Imagen: "imagen", precio: 500 },
+  { nombre: "Cuaderno", categoria: "Cuadernos", valoracion: "5", año: "3", Imagen: "imagen", precio: 1000 },
+  { nombre: "lapicera", categoria: "Utiles escolares", valoracion: "5", año:"4", Imagen: "imagen", precio: 1000 },
+  { nombre: "Mochila azul", categoria: "Mochilas", valoracion: "3", año:"5", Imagen: "imagen", precio: 1500 },
+  { nombre: "cartuchera", categoria: "Utiles escolares", valoracion: "5", año:"2", Imagen: "imagen", precio: 1500 },
+  { nombre: "hoja cuadriculada", categoria: "Hojas", valoracion: "5", año:"5", Imagen: "imagen", precio: 2000 },
+  { nombre: "Mochila verde", categoria: "Mochilas", valoracion: "3", año:"2", Imagen: "imagen", precio: 2000 },
+  { nombre: "calculadora cientifica", categoria: "Utiles escolares", valoracion: "5", año:"2", Imagen: "imagen", precio: 2500 },
+  { nombre: "Libro de etica", categoria: "Utiles escolares", valoracion: "5", año:"5", Imagen: "imagen", precio: 2500 },
+];
+
+
+let categoriaSeleccionada = "";
+let añoSeleccionado = "";
+let textoBusqueda = "";  
+let precioMin = "";
+let precioMax = "";
+
+
+// para que las tildes no rompan el codigo
+function normalizar(str) {
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+
+// Mostrar productos
+function MostrarProductos(lista) {
+  ProductosContainer.innerHTML = "";
+ 
+  lista.forEach(producto => {
+    ProductosContainer.innerHTML += `
+      <div class="productos">
+        <p>${producto.Imagen}</p>
+        <div class="cuadradoAzulProducto1"></div>
+        <div class="cuadradoAzulProducto2"></div>
+        <h4 class="titulos">${producto.nombre}</h4>
+        <p class="valoracion"> vendedor: ${producto.valoracion}</p>
+        <p class="precio"> $${producto.precio} </p>
+      </div>
+    `;
+  });
+}
+
+
+// BARRA DE BÚSQUEDA
+const busquedaInput = document.getElementById("Búsqueda");
+busquedaInput.addEventListener("input", (e) => {
+  textoBusqueda = normalizar(e.target.value.trim());
+  aplicarFiltros();
+});
+
+
+// Inputs de precio
+const precioMinInput = document.getElementById("precioMin");
+const precioMaxInput = document.getElementById("precioMax");
+
+
+precioMinInput.addEventListener("input", (e) => {
+  precioMin = e.target.value !== "" ? parseFloat(e.target.value) : "";
+  aplicarFiltros();
+});
+
+
+precioMaxInput.addEventListener("input", (e) => {
+  precioMax = e.target.value !== "" ? parseFloat(e.target.value) : "";
+  aplicarFiltros();
+});
+
+
+// Aplicar filtros
+function aplicarFiltros() {
+  const filtrados = lista.filter(producto => {
+
+
+    const coincideCategoria =
+      categoriaSeleccionada === "" ||
+      normalizar(producto.categoria) === categoriaSeleccionada;
+
+
+    const coincideAño =
+      añoSeleccionado === "" ||
+      producto.año === añoSeleccionado;
+
+
+    const coincideBusqueda =
+      textoBusqueda === "" ||
+      normalizar(producto.nombre).includes(textoBusqueda) ||
+      normalizar(producto.categoria).includes(textoBusqueda);
+
+
+    const coincidePrecio =
+      (precioMin === "" || producto.precio >= precioMin) &&
+      (precioMax === "" || producto.precio <= precioMax);
+
+
+    return coincideCategoria && coincideAño && coincideBusqueda && coincidePrecio;
   });
 
 
-//TERMINAR ESTO
-  //const tituloCategoria = document.getElementById("tituloCategoria");
-  //const filtroCategoria = document.getElementById("filtroCategoria");
-  
-  //tituloCategoria.addEventListener("click", () => {
-    //filtroCategoria.classList.toggle("oculto");
-  //});
+  MostrarProductos(filtrados);
+}
 
 
-
-const ProductosContainer = document.getElementById("Productos-container")
-//Esto seria el JSON de productos
-  const lista = [  
-    { nombre: "Empanadas",
-        categoria: "Utiles escolares",
-        valoracion: "5",
-        Imagen: "imagen" },
-   
-    { nombre: "Asado",
-        categoria: "Mochilas",
-        valoracion: "3",
-        Imagen: "imagen" },
-
-        { nombre: "Empanadas",
-          categoria: "Utiles escolares",
-          valoracion: "5",
-          Imagen: "imagen" },
-     
-        
-]
- 
- 
-let productos =[];
+//   DROPDOWN CATEGORÍA
+const categoriaLabel = document.getElementById("categoriaLabel");
+const categoriaMenu = document.getElementById("categoriaMenu");
+const flecha = document.querySelector(".flecha");
 
 
+document.querySelectorAll("#categoriaMenu p").forEach(op => {
+  op.addEventListener("click", (e) => {
+    categoriaSeleccionada = normalizar(e.target.textContent.trim());
+    categoriaMenu.classList.remove("abierto");
+    flecha.classList.remove("abierta");
+    aplicarFiltros();
+  });
+});
 
 
-  function MostrarProductos(lista) {
-    ProductosContainer.innerHTML = "";
- 
-    lista.forEach(producto => {
-      ProductosContainer.innerHTML += `
-      <div class = "productos">
-      <p>${producto.Imagen}</p>
-      <div class = "cuadradoAzulProducto1"></div>
-      <div class = "cuadradoAzulProducto2"></div>
-        <h4 class = "titulos">${producto.nombre}</h4>
-        <p class = "valoracion"> vendedor: ${producto.valoracion}</p>
+// Abrir/cerrar categoría
+categoriaLabel.addEventListener("click", (e) => {
+  e.stopPropagation();
+  categoriaMenu.classList.toggle("abierto");
+  flecha.classList.toggle("abierta");
+});
 
-      </div>
-    `});
-  }
+
+// Cerrar si clickeas afuera
+document.addEventListener("click", () => {
+  categoriaMenu.classList.remove("abierto");
+  flecha.classList.remove("abierta");
+});
+
+
+//      DROPDOWN AÑO
+const añoLabel = document.getElementById("añoLabel");
+const añoMenu = document.getElementById("añoMenu");
+const flechaAño = añoLabel.querySelector(".flecha");
+
+
+// Abrir/cerrar año
+añoLabel.addEventListener("click", (e) => {
+  e.stopPropagation();
+  añoMenu.classList.toggle("abierto");
+  flechaAño.classList.toggle("rotate");
+});
+
+
+// solo agarra los números de Año
+document.querySelectorAll("#añoMenu p").forEach(op => {
+  op.addEventListener("click", (e) => {
+    añoSeleccionado = e.target.textContent.match(/\d+/)?.[0] || "";
+    añoMenu.classList.remove("abierto");
+    flechaAño.classList.remove("rotate");
+    aplicarFiltros();
+  });
+});
+
+
+// Cerrar si clickeas afuera
+document.addEventListener("click", () => {
+  añoMenu.classList.remove("abierto");
+  flechaAño.classList.remove("rotate");
+});
+
+
+// boton para borrar filtros
+const botonBorrarFiltros = document.getElementById("botonBorrarFiltros");
+
+
+botonBorrarFiltros.addEventListener("click", () => {
+  categoriaSeleccionada = "";
+  añoSeleccionado = "";
+  textoBusqueda = "";
+  precioMin = "";
+  precioMax = "";
+  busquedaInput.value = "";
+  precioMinInput.value = "";
+  precioMaxInput.value = "";
+  categoriaMenu.classList.remove("abierto");
+  flecha.classList.remove("abierta");
+  añoMenu.classList.remove("abierto");
+  flechaAño.classList.remove("rotate");
 
 
   MostrarProductos(lista);
-
-
-
-
-
-  //MATI, ESTO QUE VOY A PONER ABAJO ES DE VICEN, ESTOY PROBANDO A VER SI FUNCIONA 
-  //LA BARRA DE BUSQUEDA, NO TE PREOCUPES NO TE BORRE NADA.
-
-  
-// 1) Traigo los productos del backend
-getEvent("productosPublicados", function(productos) {
-
-    const inputBusqueda = document.getElementById("Búsqueda");
-    const contenedor = document.getElementById("contenedor-productos");
-
-    // Mostrar todos de entrada
-    mostrarProductos(productos);
-
-    // 2) Cada vez que escribís, filtra
-    inputBusqueda.addEventListener("input", function() {
-
-        let texto = inputBusqueda.value.toLowerCase();
-
-        let filtrados = productos.filter(p =>
-            p.nombre.toLowerCase().includes(texto) ||
-            p.descripcion.toLowerCase().includes(texto)
-        );
-
-        mostrarProductos(filtrados);
-
-    });
-
-    // Función que dibuja tarjetas
-    function mostrarProductos(lista) {
-        contenedor.innerHTML = "";
-
-        lista.forEach(p => {
-
-            let card = document.createElement("div");
-            card.classList.add("tarjeta-producto");
-
-            card.innerHTML = `
-                <img src="${p.imagenes}" class="img-producto">
-                <h3>${p.nombre}</h3>
-                <p>$${p.precio}</p>
-                <button onclick="verProducto(${p.idProducto})">Ver</button>
-            `;
-
-            contenedor.appendChild(card);
-        });
-    }
 });
+
+
+MostrarProductos(lista);
+
+
+
 

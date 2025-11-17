@@ -1,17 +1,8 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #2A4BA1;
   font-family: Arial, sans-serif;
+ 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .header {
@@ -20,18 +11,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 3%;
-
-
-
-
+  padding: 2vh 3vh;
 }
-
-
-
-
-
-
 
 
 .Botones {
@@ -40,29 +21,24 @@ body {
   position: relative;
   gap: 8vh;
   top: 5x;
-  right: 10vh
+  right: 8vh
 }
-
-
-
-
-
-
 
 
 .BarraDeBusqueda {
 width: 80vh;
 height: 4.5vh;
 background-color: white;
-border: 2px solid ;
+border: 2px;
 border-radius: 1vh;
 position: relative;
 left: -9vh;
 padding: 0.5vh 0.7vh;
-
+background-image: url('Lupa.png');
+background-repeat: no-repeat;
+background-size: 4vh;
+background-position: 97% center;
 }
-
-
 
 
 .BarraDeBusqueda::placeholder {
@@ -77,197 +53,110 @@ line-height: 4.5vh;
 
 
 .CuadradoAzul {
-  width: 110vh;
-  height: 81vh;
-  background-color: #2A4BA1;
+  width: 100%;
+  display: flex;
+  padding: 4vh;
+}
+
+
+
+
+.Productos-container {
+  width: 55%;
   display: flex;
   flex-direction: column;
+  gap: 1.5vh;
+}
+
+
+
+
+.productos {
+  background: #1B1464;
+  display: flex;
   align-items: center;
-  gap: none;
-  padding-top: 3vh;
-    display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
+  padding: 2vh;
+  border-radius: 25px;
+  border: 3px solid #1B1464;
+  height: 20vh;
 }
 
 
-
-
-.ContenedorImagen1,
-.ContenedorImagen2,
-.ContenedorImagen3 {
-  position: relative;
-  display: inline-block;
-  width: 100%;              
-right: 1%;
-  position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 80vh;
-height: 53vh;
-
+.cuadradoAzulProducto1 {
+  width: 65vh;
+  height: 22vh;
+  background: white;
+  border-radius: 15px;
+  margin-left: -1vh;
 }
 
 
-.ImagenGrupo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.info {
+  width: 45vh;
+  height: 22vh;
+  border-radius: 15px;
+  margin-left: 2vh;
 }
 
 
-.Lapicera {
-position: absolute;
-top: 18%;        
-left: 18%;        
-width: 14vh;    
-height: 15vh;
-object-fit: cover;
-border-radius: 1vh;
+.titulos {
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
 }
 
 
-.Cartuchera {
-position: absolute;
-top: 18%;        
-left: 18%;        
-width: 14vh;    
-height: 15vh;
-object-fit: contain;
-border-radius: 1vh;
+.valoracion {
+  margin: 0.5vh 0;
+  font-size: 2vh;
+  color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-.Toldot {
-position: absolute;
-top: 18%;        
-left: 18%;        
-width: 14vh;    
-height: 15vh;
-object-fit: contain;
-border-radius: 1vh;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Lapicera:hover,
-.Cartuchera:hover,
-.Toldot:hover {
-  transform: scale(1.05); /* efecto suave al pasar el mouse */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Texto1 {    
-width: 30%;
-padding: 1vh;
- top: 25%;
- right: 10%;
- position: absolute;
-   color: rgba(0, 0, 0,) ;      
-font-family: 'Montserrat', sans-serif;
-font-weight: bold;                      
-font-size: 3vh;    
-}
-
-
-
-
-.Texto2 {    
-width: 10%;
-padding: 1vh;
- top: 40%;
- right: 30%;
- position: absolute;
-   color: rgba(0, 0, 0,) ;      
-font-family: 'Montserrat', sans-serif;
-font-weight: 700;                      
-font-size: 3vh;    
-}
-
-
-
-
-
-
 
 
 .precio {
   font-weight: bold;
+  font-size: 2.5vh;
   margin: 0;
-  color: #000000;
+  color: white;
+}
+
+
+.panelDerecha {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh;
+  gap: 15vh;
+}
+
+
+.Texto1, .Texto2 {
+  color: black;
+  font-weight: bold;
+  font-size: 3vh;
 }
 
 
 
 
 .finalizarCompra {
-position: absolute;
-right: 10%;
-top: 75%;
-width: 58.3vh;
-height: 7.5vh;
-border: 0.5vh solid #154ACF;
-border-radius: 6vh;
-background-color: #051434;
+  margin-top: 15vh;
+  margin-left: 15%;
+  width: 90%;
+  height: 7vh;
+  background-color: #051234;
+  border-radius: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-
-
 .TextoFinalizarCompra {
-position: absolute;
-top: -30%;
-right: 5%;
-height: 10%;
-font-family: 'Montserrat', sans-serif;
-font-weight: bold;          
-font-size: 3vh;
-letter-spacing: 0.2vh;
-text-decoration: none; /* no funciona */
-padding: 1vh 1vh;
+  color: #154ACF;
+  font-size: 4vh;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 

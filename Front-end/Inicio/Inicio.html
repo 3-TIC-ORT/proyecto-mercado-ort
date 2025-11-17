@@ -10,7 +10,6 @@
        <header class="header">
         <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo" height="70%" width="70%"></img> </a>
         <input type="text" id="Búsqueda" class="BarraDeBusqueda" name="Búsqueda" placeholder="Buscar productos" required>
-        <div id="contenedor-productos"></div>
        
         <div class="Botones">
          <div class="user">
@@ -25,51 +24,67 @@
       <div class="cuadradAzul">
        <div class="ambosFilterContainer">
         <section class="filterContainer1">
-        <label for="filtroCategoria" class="Categoria">Categorias</label>
-         <select name="" id="filtroCategoria" class="despegableCategoria oculto">
-            <option value="">Utiles escolares</option>
-            <option value="">Cuadernos</option>
-            <option value="">Mochilas</option>
-            <option value="">Carpetas</option>
-            <option value="">Hojas</option>
-         </select>
-       </section>
+  <div class="dropdown">
+    <div class="dropdownLabel" id="categoriaLabel">
+      Categorías <img src="flecha.png" class="flecha" alt="">
+    </div>
 
 
-
-
-
-
+    <div class="dropdownMenu" id="categoriaMenu">
+      <p>Útiles escolares</p>
+      <p>Cuadernos</p>
+      <p>Mochilas</p>
+      <p>Carpetas</p>
+      <p>Hojas</p>
+    </div>
+  </div>
+</section>
 
 
        <section class="filterContainer2">
-        <select name="" id="filtroAño" class="despegableAño">
-            <option value="">1 año</option>
-            <option value="">2 año</option>
-            <option value="">3 año</option>
-            <option value="">4 año</option>
-            <option value="">5 año</option>
-        </select>
-       </section>
+  <div class="dropdown">
+    <div class="dropdownLabelAño" id="añoLabel">
+      Año <img src="flecha.png" class="flecha" alt="">
+    </div>
+
+
+    <div class="dropdownMenuAño" id="añoMenu">
+      <p>1 año</p>
+      <p>2 año</p>
+      <p>3 año</p>
+      <p>4 año</p>
+      <p>5 año</p>
+    </div>
+  </div>
+</section>
        </div>
 
 
+<button id="botonBorrarFiltros" class="botonBorrarFiltros">Borrar filtros</button>
+
+
+
+
+
+
        
        
-       <section> usar la barra de busqueda del tp2 de avanzado front para el filtro de rango de precio</section>
+<section class="filterContainer3">
+  <h3 class="filterContainer3Texto">Rango de precio</h3>
+  <div class="precioInputsDiv">
+    <input type="number" id="precioMin" placeholder="minimo">
+    <span>A</span>
+    <input type="number" id="precioMax" placeholder="maximo">
+  </div>
+</section>
+
+
       </div>
+
+
       <section class="">
-        <div class="Productos-container" id="Productos-container">
-
-
-        </div>
-
-
+        <div class="Productos-container" id="Productos-container"></div>
       </section>
    <script src="Inicio.js"></script>
 </body>
 </html>
-
-
-
-

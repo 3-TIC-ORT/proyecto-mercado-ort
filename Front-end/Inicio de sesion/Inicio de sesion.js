@@ -4,17 +4,21 @@ let Contraseña = document.getElementById("CajaDeContraseña");
 let cajaError = document.getElementById("BotonError");
 let mensajeDeError = document.getElementById("MensajeDeError");
 
-connect2Server(3000); 
+
+connect2Server(3000);
+
 
 botonInicioDeSesion.addEventListener("click", function() {
     let contraseñafinal = Contraseña.value.trim();
     let usuariofinal = DNI.value.trim();
     console.log("front");
-    
+   
 
 
-postEvent("inicioSesion", {user: usuariofinal,contraseña: contraseñafinal}, 
-function(respuesta) 
+
+
+postEvent("inicioSesion", {user: usuariofinal,contraseña: contraseñafinal},
+function(respuesta)
 {
     if(respuesta)
     {
@@ -28,5 +32,9 @@ function(respuesta)
       mensajeDeError.style.display = "inline-block";
     }
 
+
 });
 });
+
+
+

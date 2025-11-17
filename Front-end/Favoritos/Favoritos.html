@@ -12,60 +12,69 @@
 
 
 
+
+
+
+
    
     <header class="header">
-        <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo"></img> </a>
+        <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo" height="70%" width="70%"></img> </a>
         <input type="text" id="Búsqueda" class="BarraDeBusqueda" name="Búsqueda" placeholder="Buscar productos" required>
        
         <div class="Botones">
          <div class="user">
-            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png" ></a></div>
+            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png"height="70%" width="70%"></a></div>
          <div class="favoritos">
-            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png"></a></div>
+            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png" height="70%" width="70%"></a></div>
          <div class="cart">
-            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt=""></a></div>
+            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt="" height="70%" width="70%"></a></div>
         </div>
       </header>
 
 
 
 
+
+
+
+
    
     <div class="CuadradoAzul">
-        <div class="ContenedorImagen1">
-            <img src="Group 27.png" alt="Group 26" class="ImagenGrupo" >
-            <img src="lapicera.png" alt="Lapicera" class="Lapicera">
+
+
+
+
+    <div class="Productos-container" id="Productos-container"></div>
+
+
+    <div class="panelDerecha">
+        <div class="Texto1">
+            Precio Total: <span id="precioTotal">$0</span>
         </div>
-       
-        <div class="ContenedorImagen2">
-            <img src="Group 28.png" alt="Group 28" class="ImagenGrupo">
-            <img src="cartuchera.jpg" alt="Cartuchera" class="Cartuchera">
+
+
+        <div class="Texto2">
+            Cantidad de Productos: <span id="cantidadTotal">0</span>
         </div>
-   
-        <div class="ContenedorImagen3">
-            <img src="Group 27.png" alt="Group 27" class="ImagenGrupo">
-            <img src="toldot.png" alt="Toldot" class="Toldot" >
+
+
+        <div class="finalizarCompra">
+            <a href="finalizacion.html" class="TextoFinalizarCompra">
+                AGREGAR AL CARRITO
+            </a>
         </div>
     </div>
 
 
+</div>
 
 
-    <div class="Texto1">
-        <p class="precio">Precio Total:</p>
-    </div>
-   
-    <div class="Texto2">
-        <p class="cantidadDeProductos">Cantidad de Productos:</p>
-    </div>
-
-
-
-
-    <div class="finalizarCompra"> <a href="../pantalla de finacilacion de pantalla/finalicacion de compra.html" >
-        <p class="TextoFinalizarCompra">PASAR A FINALIZAR COMPRA</p></a></div>
-   
+   <script src="Favoritos.js"></script>
 </body>
 </html>
+
+
+
+
 
 
