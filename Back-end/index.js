@@ -25,16 +25,9 @@ function registrarse(usuario)
         return 1;
         // Ese usuario ya está en uso
       }
-      else if (usuario.dni === listaDeUsuarios[i].dni)
-      {
-        return 2;
-        // Ese usuario ya está en uso
-
-
-      }
       else if(usuario.mail === listaDeUsuarios[i].mail)
       {
-      return 3;
+      return 2;
       // Ese mail ya está en uso
       }
     }
@@ -231,3 +224,4 @@ subscribePOSTEvent("modificarFavorito", ModificarFavoritos);
 subscribePOSTEvent("modificarCarrito", ModificarCarrito);
 
 startServer(3000, true);
+

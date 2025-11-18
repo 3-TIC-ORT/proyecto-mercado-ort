@@ -1,62 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f2f2f2;
-    color: #000;
-  }
-  
-  .header {
-    height: 70px;
-    background: #0d369e;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-  }
-
-  #Búsqueda {
-    width: 520px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
-    transition: all 0.3s;
-  }
-  
-  #Búsqueda:focus {
-    border-color: #1a4270;
-    box-shadow: 0 0 5px #1a3d66;
-  
-  }
-
-  .Logo {
-
-   height: 65px;
-  justify-content: end;
-   align-items: start;
-
-   }
-
-  .Logo img
-  .user img,
-  .favoritos img,
-  .cart img {
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    
-  }
-  .user img:hover,
-.favoritos img:hover,
-.cart img:hover {
-  transform: scale(1.1);
+.header {
+  background: #154ACF;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 3vh;
+  gap: 3vh;
 }
 
-.user, .favoritos, .cart {
-  margin-left: 15px;
+.Logo {
+  height: 60px;
+  width: auto;
+}
+
+.BarraDeBusqueda {
+  width: 450px;
+  max-width: 50vw;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #154ACF;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background-image: url('Lupa.png');
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: right 12px center;
+  box-sizing: border-box;
+}
+
+.BarraDeBusqueda::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.Botones {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  
+}
+
+.Botones img {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.Botones a:hover img {
+  transform: scale(1.1);
 }
 
   
@@ -68,11 +65,20 @@ body {
   }
   
   .product-images {
-    
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  .product-images img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
   
   .main-image img {
     width: 120%;
@@ -100,6 +106,10 @@ body {
   }
   
   .product-info {
+     background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
     position: relative;
     font-family: "Stack Sans Healine" sans-serif;
     font-weight: semibold;
@@ -133,6 +143,7 @@ body {
   }
   
   .btn {
+  
     display: block;
     width: 100%;
     padding: 12px;
@@ -175,4 +186,18 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   }
-  
+  .comprar:hover, .carrito:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.22);
+}
+
+#resultadosBusqueda {
+  position: absolute;
+  background: white;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 2000;
+  display: none;
+}

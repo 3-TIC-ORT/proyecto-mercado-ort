@@ -21,3 +21,5 @@ botones.forEach((boton, index) => {
     totalSpan.textContent = `$${precioTotal}`;
   });
 });
+
+

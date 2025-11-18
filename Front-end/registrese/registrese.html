@@ -2,40 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title> Registrese</title>
+  <title>Registrese</title>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
   <link rel="stylesheet" href="registrese.css">
 </head>
 <body>
 
   <div class="Fondo">
-    <h1 class="titulo"> Registrarse </h1>
-     <div class="CuadradoGris">
-       
-       <div class="CuadradoAzul1"></div>
-       <div class="CuadradoAzul"><img src="Group 66.png"  height="55vh" class="Logo"></div>
-       <div class="Formulario">
-      
-    <input type="text"PlaceHolder="Nombre" id="CajaDeNombre" class="BotonDeNombre"  required>
-    <input type="text"PlaceHolder="Apellido" id="CajaDeApellido" class="BotonDeApellido" required>
-    <input type="email"PlaceHolder="Mail" id="CajaDeMail" class="BotonDeMail" required>
-    <input type="text"PlaceHolder="Curso" id="CajaDeCurso" class="BotonDeCurso" required>
-    <input type="text"PlaceHolder="Orientación" id="CajaDeOrientación" class="BotonDeOrientación" required>
-    <input type="text"PlaceHolder="Contraseña" id="CajaDeContraseña" class="BotonDeContraseña" required>
-    <input type="text"PlaceHolder="Repetir Contraseña" id="CajaDeContraseña2" class="BotonDeContraseña2" required>
 
-    
-        <button id="BotondeRegistrar" class="BotonDeRegistrar"> REGISTRARSE </button>
-        
-        <div  class="BotonError" id="BotonError" style="display: none;"> 
-         <p id="MensajeDeError"  style="display: none;" >  ERROR: <br>DNI o contraseña incorrecta</p>
+    <h1 class="titulo">Registrarse</h1>
+
+    <div class="CuadradoGris">
+      <div class="CuadradoAzul1"></div>
+      <div class="CuadradoAzul">
+        <img src="Group 66.png" height="55vh" class="Logo">
+      </div>
+
+      <div class="Formulario">
+
+        <input type="text" placeholder="Nombre" id="CajaDeNombre" class="BotonDeNombre" required>
+        <input type="text" placeholder="Apellido" id="CajaDeApellido" class="BotonDeApellido" required>
+        <input type="email" placeholder="Mail" id="CajaDeMail" class="BotonDeMail" required>
+        <input type="text" placeholder="Curso" id="CajaDeCurso" class="BotonDeCurso" required>
+        <input type="text" placeholder="Orientación" id="CajaDeOrientacion" class="BotonDeOrientación" required>
+        <input type="text" placeholder="Contraseña" id="CajaDeContraseña" class="BotonDeContraseña" required>
+        <input type="text" placeholder="Repetir Contraseña" id="CajaDeContraseña2" class="BotonDeContraseña2" required>
+
+        <button id="BotondeRegistrar" class="BotonDeRegistrar">REGISTRARSE</button>
+
+        <div class="BotonError" id="BotonError">
+          <p id="MensajeDeError" style="display: none;"></p>
         </div>
-     </div>
-   </div>
+
+      </div>
+    </div>
   </div>
 
   <script src="registrese.js"></script>
 </body>
 </html>
-

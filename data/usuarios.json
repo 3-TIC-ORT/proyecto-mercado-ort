@@ -51,6 +51,31 @@
     "contraseña": "123",
     "favoritos": [],
     "carrito": []
+  },
+  {
+    "id": 5,
+    "user": "pola",
+    "apellido": "xd",
+    "curso": "5C",
+    "orientación": "D",
+    "mail": "xd@gmail.com",
+    "contraseña": "xd",
+    "favoritos": [],
+    "carrito": [],
+    "productosPublicados": 0,
+    "productosVendidos": 0
+  },
+  {
+    "id": 6,
+    "user": "santi",
+    "apellido": "fernadez",
+    "curso": "3d",
+    "orientación": "tic",
+    "mail": "w@gmail.com",
+    "contraseña": "W",
+    "favoritos": [],
+    "carrito": [],
+    "productosPublicados": 0,
+    "productosVendidos": 0
   }
-  
 ]

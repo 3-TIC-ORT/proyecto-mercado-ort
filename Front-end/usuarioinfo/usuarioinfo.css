@@ -6,59 +6,61 @@
 }
 
 .header {
-  height: 70px;
-  background: #154acf;
+  background: #154ACF;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 2vh 3vh;
+  gap: 3vh;
 }
 
-
-#Búsqueda {
-  width: 520px;
-  padding: 10px 14px;
-  border-radius: 16px;
-  border: 1px solid #cec8c8;
-  font-size: 14px;
-  outline: none;
-  transition: all 0.3s;
+.Logo {
+  height: 60px;
+  width: auto;
 }
 
-#Búsqueda:focus {
-  border-color: #1a4270;
-  box-shadow: 0 0 5px #1a3d66;
-
+.BarraDeBusqueda {
+  width: 450px;
+  max-width: 50vw;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #154ACF;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background-image: url('Lupa.png');
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: right 12px center;
+  box-sizing: border-box;
 }
 
-.logo {
+.BarraDeBusqueda::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
 
- height: 65px;
-justify-content: end;
- align-items: start;
- left: 4%;
-
- }
-
-.logo img
-.user img,
-.favoritos img,
-.cart img {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.Botones {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   
 }
-.user img:hover,
-.favoritos img:hover,
-.cart img:hover {
-transform: scale(1.1);
+
+.Botones img {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  transition: transform 0.2s;
 }
 
-.user, .favoritos, .cart {
-margin-left: 15px;
+.Botones a:hover img {
+  transform: scale(1.1);
 }
 
 
@@ -88,45 +90,56 @@ margin-left: 15px;
   font-size: 20px;
 }
 
-.botones-superior {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
+ 
 
 .btn-cerrar {
+  width: 280px;          
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
-  border: none;
+  padding: 0;
   border-radius: 6px;
-  cursor: pointer;
-  padding: 6px;
+  border: none;
+  background: white;
+}
+
+.btn-cerrar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .btn-cerrar img {
-  width: 295px;   
-  height: 35px;  
+  width: 100%;       
+  height: 100%;
   object-fit: contain;
-  align-items: center;
 }
 
+ 
+.botones-superior {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
 .btn-editar {
-  background-color: #1B1464;
-  color: white;
-  border: none;
+ width: 110px;            
+  height: 50px;            
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 8px 16px; 
   font-size: 14px;
-  transition: background-color 0.2s ease;
+  font-weight: bold;
 }
 
 .btn-editar :hover {
-  width: 200px;
-  height: 65px;
+  width: 300px;
+  height: 85px;
   object-fit: contain;
   align-items: center;
 
@@ -138,11 +151,11 @@ margin-left: 15px;
 }
 
 .btn-editar {
+  
   background-color: #1B1464;
   color: white;
 }
 
-/* ---- Contenido del perfil ---- */
 .PerfilContenido {
   display: flex;
   justify-content: space-between;
@@ -175,7 +188,7 @@ margin-left: 15px;
   color: black;
 }
 
-/* ---- Datos a la derecha ---- */
+
 .PerfilDerecha {
   display: flex;
   flex-direction: column;

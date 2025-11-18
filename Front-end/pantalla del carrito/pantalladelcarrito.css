@@ -15,14 +15,25 @@
   }
   
   #Búsqueda {
-    width: 520px;
-    padding: 10px 14px;
-    border-radius: 0px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
-    transition: all 0.3s;
-  }
+
+  width: 450px;
+  max-width: 50vw;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #154ACF;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background-image: url('Lupa.png');
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: right 12px center;
+  box-sizing: border-box;
+}
+ 
+  
   
   #Búsqueda:focus {
     border-color: #1a4270;

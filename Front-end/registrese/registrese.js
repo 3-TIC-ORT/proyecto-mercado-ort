@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nombre = document.getElementById("CajaDeNombre");
   const apellido = document.getElementById("CajaDeApellido");
   const curso = document.getElementById("CajaDeCurso");
-  const orientación = document.getElementById(CajaDeOrientación);
+  const orientacion = document.getElementById("CajaDeOrientacion");
   const mail = document.getElementById("CajaDeMail");
   let idUsuario;
 
@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const nombreValor = nombre.value.trim();
     const apellidoValor = apellido.value.trim();
     const cursoValor  = curso.value.trim();
-    const orientaciónValor = orientación.value.trin();
+    const orientacionValor = orientacion.value.trim();
     const mailValor = mail.value.trim();
     const pass1 = contraseña1.value.trim();
     const pass2 = contraseña2.value.trim();
 
     
-    if (nombreValor === "" || apellidoValor === "" || cursoValor === "" || orientaciónValor === ""|| mailValor === "" || pass1 === "" || pass2 === "") {
+    if (nombreValor === "" || apellidoValor === "" || cursoValor === "" || orientacionValor === ""|| mailValor === "" || pass1 === "" || pass2 === "") {
       mensajeError.textContent = "ERROR: ASEGÚRESE DE COMPLETAR TODOS LOS CAMPOS";
       idUsuario ++;
       console.log(idUsuario);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       divError.style.display = "none";
       mensajeError.style.display = "none";
-      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, curso: cursoValor, orientación: orientaciónValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: 0}, function(respuesta) {
+      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, curso: cursoValor, orientación: orientacionValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: 0, productosVendidos: 0}, function(respuesta) {
       if(respuesta === 0)
       {
         window.location.href = "../Inicio/Inicio.html";
@@ -51,12 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mensajeError.style.display = "block";
       }
       else if(respuesta === 2)
-      {
-        mensajeError.textContent = "ERROR: ESE DNI YA ESTÁ EN USO";
-        divError.style.display = "flex";
-        mensajeError.style.display = "block";
-      }
-      else if(respuesta === 3)
       {
         mensajeError.textContent = "ERROR: ESE MAIL YA ESTÁ EN USO";
         divError.style.display = "flex";

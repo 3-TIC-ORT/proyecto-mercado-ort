@@ -1,9 +1,9 @@
-// --- UPLOAD IMAGEN PERFIL ---
+
 const uploadBox = document.getElementById("uploadbox");
 const inputFile = document.getElementById("imagenPrincipal");
 
 uploadBox.addEventListener("click", () => {
-  inputFile.click(); // abrir selector
+  inputFile.click(); 
 });
 
 inputFile.addEventListener("change", (event) => {
@@ -13,7 +13,7 @@ inputFile.addEventListener("change", (event) => {
   const reader = new FileReader();
   reader.onload = () => {
     uploadBox.style.backgroundImage = `url(${reader.result})`;
-    uploadBox.style.backgroundSize = "cover"; // ver imagen completa
+    uploadBox.style.backgroundSize = "cover"; 
     uploadBox.style.backgroundRepeat = "center";
     uploadBox.style.backgroundPosition = "no-repeat";
   };
@@ -25,7 +25,7 @@ let CursoInput = document.getElementById("curso");
 let editando = false;
 
 getEvent("editarUsuario", 
-//respuesta representa lo que te devuelve el back
+
 function(respuesta) {
  
   });

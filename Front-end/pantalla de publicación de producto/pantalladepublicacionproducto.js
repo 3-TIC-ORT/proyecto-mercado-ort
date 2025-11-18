@@ -1,16 +1,16 @@
-// Conectar con el backend
+
 connect2Server(3000);
 
-// Obtener los elementos del HTML
+
 const botonPublicar = document.getElementById("publicarproducto");
 const inputs = document.querySelectorAll(".derecha input");
 const inputImagen = document.getElementById("imagenPrincipal");
 
 botonPublicar.addEventListener("click", () => {
-  // Crear el objeto producto con los datos del formulario
+
   const producto = {
-    idUsuario: 1, // ⚠️ Cambiar esto: poner el ID real del usuario logueado
-    idProducto: Date.now(), // número único
+    idUsuario: 1,
+    idProducto: Date.now(), 
     nombre: inputs[0].value,
     descripcion: inputs[1].value,
     precio: inputs[2].value,
@@ -19,19 +19,17 @@ botonPublicar.addEventListener("click", () => {
     imagenes: []
   };
 
-  // Si se sube una imagen, convertirla a base64
   const archivo = inputImagen.files[0];
   if (archivo) {
     const lector = new FileReader();
     lector.onload = function() {
       producto.imagenes.push(lector.result);
 
-      // Enviar el producto al backend
       enviarProducto(producto);
     };
     lector.readAsDataURL(archivo);
   } else {
-    // Si no hay imagen igual lo enviamos
+ 
     enviarProducto(producto);
   }
 });
@@ -49,13 +47,11 @@ function enviarProducto(producto) {
 const uploadBox = document.querySelector(".upload-box");
 const inputFile = document.getElementById("imagenPrincipal");
 
-// Abrir selector de archivo
-uploadBox.addEventListener("click", () => {
+ uploadBox.addEventListener("click", () => {
   inputFile.click();
 });
 
-// Cuando el usuario elige una imagen
-inputFile.addEventListener("change", (event) => {
+ inputFile.addEventListener("change", (event) => {
   const file = event.target.files[0];
   if (!file) return;
 
@@ -64,12 +60,12 @@ inputFile.addEventListener("change", (event) => {
     uploadBox.style.backgroundImage = `url(${reader.result})`;
     uploadBox.style.backgroundSize = "cover";
     uploadBox.style.backgroundPosition = "center";
-    uploadBox.textContent = ""; // borra el texto "SUBIR IMÁGENES"
+    uploadBox.textContent = ""; 
   };
   reader.readAsDataURL(file);
 });
 
-// Botón publicar
-document.getElementById("publicarproducto").addEventListener("click", () => {
+ document.getElementById("publicarproducto").addEventListener("click", () => {
   alert("Tu producto fue publicado con éxito!");
 });
+
