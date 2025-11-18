@@ -1,10 +1,18 @@
 [
   {
-    "idUsuario": 2,
-    "idProducto": 7,
-    "nombre": "lapicera",
-    "precio": 100,
+    "idUsuario": 0,
+    "idProducto": 1,
+    "nombre": "",
+    "precio": null,
     "imagenes": "links",
-    "descripcion": "texto"
+    "descripcion": ""
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 2,
+    "nombre": "",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": ""
   }
 ]

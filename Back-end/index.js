@@ -128,8 +128,17 @@ function ProductosPublicados()
 //producto{idUsuario, idProducto, nombre, precio, imagenes, descripcion}
 function publicarProducto(producto)
 {
+  producto.idProducto = listaDeProductos.length;
   listaDeProductos.push(producto);
   fs.writeFileSync("./data/productos.json", JSON.stringify(listaDeProductos, null, 2));
+  for(let i = 0; i < listaDeUsuarios.length; i++)
+  {
+    if(listaDeUsuarios[i].id === producto.idUsuario)
+    {
+      listaDeUsuarios[i].productosPublicados.push(producto.idProducto);
+    }
+  }
+  fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
 }
 
 
@@ -137,7 +146,7 @@ function publicarProducto(producto)
 function BorrarProducto(producto)//producto{idUsuario, idProducto}
 {
   //filtrado en el usuarios.json
-  for(let i = 0; i <= listaDeUsuarios.length; i++)
+  for(let i = 0; i < listaDeUsuarios.length; i++)
   {
     if(listaDeUsuarios[i].id === producto.idUsuario)
     {
@@ -155,9 +164,9 @@ function BorrarProducto(producto)//producto{idUsuario, idProducto}
   }
   //filtrado en productos.json
   let listaDeProductosNuevo = [];
-  for(let i = 0; i <= listaDeProductos.length; i++)
+  for(let i = 0; i < listaDeProductos.length; i++)
   {
-    if(listaDeProductos[i].id !== producto.idProducto)
+    if(listaDeProductos[i].idProducto !== producto.idProducto)
     {
       listaDeProductosNuevo.push(listaDeProductos[i]);
     }

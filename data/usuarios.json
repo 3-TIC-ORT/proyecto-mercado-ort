@@ -9,7 +9,10 @@
     "contraseña": "123",
     "favoritos": [],
     "carrito": [],
-    "productosPublicados": 0,
+    "productosPublicados": [
+      1,
+      2
+    ],
     "productosVendidos": 0
   },
   {
@@ -22,7 +25,7 @@
     "contraseña": "1234",
     "favoritos": [],
     "carrito": [],
-    "productosPublicados": 0,
+    "productosPublicados": [],
     "productosVendidos": 0
   }
 ]

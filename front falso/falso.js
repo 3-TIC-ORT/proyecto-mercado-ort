@@ -9,6 +9,7 @@ let nomProducto = document.getElementById ("nombreProducto");
 let descProducto = document.getElementById ("descripcionProducto");
 let BotonPublicar = document.getElementById ("botonPublicar");
 let BotonBorrar = document.getElementById ("botonBorrar");
+let botonUsuario = document.getElementById ("infoUsuario");
 let id;
 
 
@@ -71,14 +72,22 @@ function agregarFav() {
   }
  
 function Publicar() {
-  postEvent("publicar", {idUsuario: 0, idProducto: null, nombre: nomProducto, precio: null, imagenes: "links", descripcion: descProducto}, function(respuesta) {
-  console.log("Hola");
+  postEvent("publicar", {idUsuario: 0, idProducto: null, nombre: nomProducto.value, precio: null, imagenes: "links", descripcion: descProducto.value}, function(respuesta) {
+  console.log("publicado");
   });
   }
 
  function Borrar() {
-  postEvent("modificarFavorito", {idUsuario: 0, idProducto: 5, modificar: true}, function(respuesta) {
+  postEvent("borrarProducto", {idUsuario: 0, idProducto: 0}, function(respuesta) {
   });
+  }
+
+  function Usuario()
+  {
+    postEvent("usuario", 0, function(respuesta)
+    {
+      console.log(respuesta);
+    });
   }
 
 
@@ -89,3 +98,4 @@ function Publicar() {
   botonFavorito.addEventListener("click", Favorito);
   BotonPublicar.addEventListener("click", Publicar);
   BotonBorrar.addEventListener("click", Borrar);
+  botonUsuario.addEventListener("click", Usuario);
