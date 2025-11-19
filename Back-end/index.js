@@ -4,12 +4,16 @@ let listaDeUsuarios = JSON.parse(fs.readFileSync("./data/usuarios.json", "utf8")
 let listaDeProductos = JSON.parse(fs.readFileSync("./data/productos.json", "utf8"));
 
 
+
+
 //registro
-//Usuario{id, user, apellido, dni, mail, contraseña, favoritos, carrito, productosPublicados}
+//Usuario{id, user, apellido, mail, contraseña, curso, orientacion, favoritos, carrito, productosPublicados, productosVendidos}
 function registrarse(usuario)
 {
   let ok;  
   usuario.id = listaDeUsuarios.length;
+
+
 
 
   //recorre la lista de usuarios para comparar si la cuenta ya existe o los atributos están en uso
@@ -25,10 +29,13 @@ function registrarse(usuario)
         return 1;
         // Ese usuario ya está en uso
       }
-      else if(usuario.mail === listaDeUsuarios[i].mail)
+      else if(usuario.falso === false)
       {
-      return 2;
-      // Ese mail ya está en uso
+        if(usuario.mail === listaDeUsuarios[i].mail)
+        {
+          return 2;
+          // Ese mail ya está en uso
+        }
       }
     }
     if(i === listaDeUsuarios.length)
@@ -42,8 +49,12 @@ function registrarse(usuario)
     }
 
 
+
+
   }
 }
+
+
 
 
 // inicio de sesión
@@ -52,17 +63,22 @@ function login(usuario)
   let ok;  
 
 
+
+
   //recorre la lista para ver si el usuario existe con las mismas características
   for (let i = 0; i <= listaDeUsuarios.length; i++)
   {
     if (listaDeUsuarios[i])
     {
-      if(usuario.user === listaDeUsuarios[i].user && usuario.contraseña === listaDeUsuarios[i].contraseña)
+      if(usuario.user === listaDeUsuarios[i].user || usuario.mail === listaDeUsuarios[i].mail)
       {
-      i = listaDeUsuarios.length + 1;
-      ok = true;
-      return true;
-      // "ah iniciado sesión correctamente"
+        if(usuario.contraseña === listaDeUsuarios[i].contraseña)
+        {
+          i = listaDeUsuarios.length + 1;
+          ok = true;
+          return true;
+          // "ah iniciado sesión correctamente"
+        }
       }
     }
     if (i === listaDeUsuarios.length)
@@ -75,6 +91,7 @@ function login(usuario)
   }
 }
 
+
 //Le doy toda la información del usuario para cuando necesite algo
 function Usuario(id)
 {
@@ -86,6 +103,7 @@ function Usuario(id)
     }
   }
 }
+
 
 //infoUsuario: {id, curso, orientacion}
 function EditarUsuario(usuario)
@@ -105,13 +123,56 @@ function ProductosPublicados()
 }
 
 
+
+
 //producto{idUsuario, idProducto, nombre, precio, imagenes, descripcion}
 function publicarProducto(producto)
 {
+  producto.idProducto = listaDeProductos.length;
   listaDeProductos.push(producto);
   fs.writeFileSync("./data/productos.json", JSON.stringify(listaDeProductos, null, 2));
+  for(let i = 0; i < listaDeUsuarios.length; i++)
+  {
+    if(listaDeUsuarios[i].id === producto.idUsuario)
+    {
+      listaDeUsuarios[i].productosPublicados.push(producto.idProducto);
+    }
+  }
+  fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+}
 
 
+//sistema de filtrado para borrar producto de los json
+function BorrarProducto(producto)//producto{idUsuario, idProducto}
+{
+  //filtrado en el usuarios.json
+  for(let i = 0; i < listaDeUsuarios.length; i++)
+  {
+    if(listaDeUsuarios[i].id === producto.idUsuario)
+    {
+        let productosNuevo = [];
+        for (let j = 0; j < listaDeUsuarios[i].productosPublicados.length; j++)
+        {  
+          if (listaDeUsuarios[i].productosPublicados[j] !== producto.idProducto)
+          {
+            productosNuevo.push(listaDeUsuarios[i].productosPublicados[j]);
+          }
+        }
+        listaDeUsuarios[i].productosPublicados = productosNuevo;
+        fs.writeFileSync("./data/usuarios.json", JSON.stringify(listaDeUsuarios, null, 2));
+    }
+  }
+  //filtrado en productos.json
+  let listaDeProductosNuevo = [];
+  for(let i = 0; i < listaDeProductos.length; i++)
+  {
+    if(listaDeProductos[i].idProducto !== producto.idProducto)
+    {
+      listaDeProductosNuevo.push(listaDeProductos[i]);
+    }
+  }
+  listaDeProductos = listaDeProductosNuevo;
+  fs.writeFileSync("./data/productos.json", JSON.stringify(listaDeProductos, null, 2));
 }
 
 
@@ -126,6 +187,8 @@ function Favoritos(id)
     }
   }
 }
+
+
 
 
 //parametro favorito: {idUsuario: 2, idProducto: 7, modificar: true/false}
@@ -162,6 +225,8 @@ function ModificarFavoritos(favorito)
 }
 
 
+
+
 function Carrito(id)
 {
   for (let i = 0; i < listaDeUsuarios.length; i++)
@@ -172,6 +237,8 @@ function Carrito(id)
     }
   }
 }
+
+
 
 
 //parametro favorito: {idUsuario: 2, idProducto: 7, modificar: true/false}
@@ -209,19 +276,24 @@ function ModificarCarrito(producto)
 
 
 
-
 subscribePOSTEvent("registro", registrarse);
 subscribePOSTEvent("inicioSesion", login);
 subscribePOSTEvent("usuario", Usuario);
 subscribePOSTEvent("editarUsuario", EditarUsuario);
 
+
 subscribeGETEvent("productosPublicados", ProductosPublicados);
 subscribePOSTEvent("publicar", publicarProducto);
+
+
+subscribePOSTEvent("borrarProducto", BorrarProducto);
+
 
 subscribePOSTEvent("favoritos", Favoritos);
 subscribePOSTEvent("carrito", Carrito);
 subscribePOSTEvent("modificarFavorito", ModificarFavoritos);
 subscribePOSTEvent("modificarCarrito", ModificarCarrito);
+
 
 startServer(3000, true);
 

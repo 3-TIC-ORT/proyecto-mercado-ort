@@ -2,80 +2,30 @@
   {
     "id": 0,
     "user": "ciro",
-    "apellido": "raffaele",
-    "dni": "49671693",
-    "mail": "ciro.raffaele@gmail.com",
-    "contraseña": "1234",
-    "favoritos": [],
-    "carrito": []
-  },
-  {
-    "id": 1,
-    "user": "vicente",
-    "apellido": "verruno",
-    "dni": "491234",
-    "mail": "vicen.verruno@gmail.com",
+    "apellido": "raffa",
+    "curso": "3a",
+    "orientación": "tic",
+    "mail": "ciro@gmail.com",
     "contraseña": "123",
-    "favoritos": [],
-    "carrito": []
-  },
-  {
-    "id": 2,
-    "user": "vicenten",
-    "apellido": "verruno",
-    "dni": "491234n",
-    "mail": "vicen.verruno@gmail.comm",
-    "contraseña": "123",
-    "favoritos": [
-      5,
-      5
-    ],
-    "carrito": []
-  },
-  {
-    "id": 3,
-    "user": "nacho",
-    "apellido": "leiva",
-    "dni": "50123",
-    "mail": "nacho.leiva@gmail.com",
-    "contraseña": "123",
-    "favoritos": [],
-    "carrito": []
-  },
-  {
-    "id": 4,
-    "user": "mati",
-    "apellido": "pitkowsky",
-    "dni": "4912345",
-    "mail": "mati.pit@gmail.com",
-    "contraseña": "123",
-    "favoritos": [],
-    "carrito": []
-  },
-  {
-    "id": 5,
-    "user": "pola",
-    "apellido": "xd",
-    "curso": "5C",
-    "orientación": "D",
-    "mail": "xd@gmail.com",
-    "contraseña": "xd",
     "favoritos": [],
     "carrito": [],
-    "productosPublicados": 0,
+    "productosPublicados": [
+      1,
+      2
+    ],
     "productosVendidos": 0
   },
   {
-    "id": 6,
-    "user": "santi",
-    "apellido": "fernadez",
-    "curso": "3d",
+    "id": 1,
+    "user": "vicen",
+    "apellido": "verru",
+    "curso": "3a",
     "orientación": "tic",
-    "mail": "w@gmail.com",
-    "contraseña": "W",
+    "mail": "vicen@gmail.com",
+    "contraseña": "1234",
     "favoritos": [],
     "carrito": [],
-    "productosPublicados": 0,
+    "productosPublicados": [],
     "productosVendidos": 0
   },
   {

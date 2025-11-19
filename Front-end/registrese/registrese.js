@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       divError.style.display = "none";
       mensajeError.style.display = "none";
-      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, curso: cursoValor, orientación: orientacionValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: 0, productosVendidos: 0}, function(respuesta) {
+      postEvent("registro", {id: null, user: nombreValor, apellido: apellidoValor, curso: cursoValor, orientación: orientacionValor, mail: mailValor, contraseña: pass1, favoritos: [], carrito: [], productosPublicados: [], productosVendidos: 0}, function(respuesta) {
       if(respuesta === 0)
       {
         window.location.href = "../Inicio/Inicio.html";
