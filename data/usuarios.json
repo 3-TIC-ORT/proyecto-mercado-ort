@@ -77,5 +77,18 @@
     "carrito": [],
     "productosPublicados": 0,
     "productosVendidos": 0
+  },
+  {
+    "id": 7,
+    "user": "lucio",
+    "apellido": "lucio",
+    "curso": "5d",
+    "orientación": "tic",
+    "mail": "lk@gmail.com",
+    "contraseña": "luc",
+    "favoritos": [],
+    "carrito": [],
+    "productosPublicados": 0,
+    "productosVendidos": 0
   }
 ]
