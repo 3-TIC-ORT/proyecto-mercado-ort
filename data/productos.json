@@ -14,5 +14,45 @@
     "precio": null,
     "imagenes": "links",
     "descripcion": ""
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 1,
+    "nombre": "goma de borrar",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": "borra bien"
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 3,
+    "nombre": "",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": ""
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 4,
+    "nombre": "",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": ""
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 0,
+    "nombre": "",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": ""
+  },
+  {
+    "idUsuario": 0,
+    "idProducto": 5,
+    "nombre": "",
+    "precio": null,
+    "imagenes": "links",
+    "descripcion": ""
   }
 ]

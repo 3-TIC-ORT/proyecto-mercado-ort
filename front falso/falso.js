@@ -9,7 +9,11 @@ let nomProducto = document.getElementById ("nombreProducto");
 let descProducto = document.getElementById ("descripcionProducto");
 let BotonPublicar = document.getElementById ("botonPublicar");
 let BotonBorrar = document.getElementById ("botonBorrar");
+let botonPublicados = document.getElementById ("publicados");
 let botonUsuario = document.getElementById ("infoUsuario");
+let botonEditar = document.getElementById ("usuarioEdit");
+let cursoEdit = document.getElementById ("curso");
+let orientacionEdit = document.getElementById ("orientacion");
 let id;
 
 
@@ -82,9 +86,26 @@ function Publicar() {
   });
   }
 
+  function ProductosPublicados()
+  {
+    getEvent("productosPublicados", function(respuesta)
+  {
+    console.log(respuesta);
+  });
+  }
+
   function Usuario()
   {
     postEvent("usuario", 0, function(respuesta)
+    {
+      console.log(respuesta);
+    });
+  }
+
+
+  function EditarUsuario()
+  {
+    postEvent("editarUsuario", {id: 0, curso: cursoEdit.value, orientacion: orientacionEdit.value}, function(respuesta)
     {
       console.log(respuesta);
     });
@@ -98,4 +119,6 @@ function Publicar() {
   botonFavorito.addEventListener("click", Favorito);
   BotonPublicar.addEventListener("click", Publicar);
   BotonBorrar.addEventListener("click", Borrar);
+  botonPublicados.addEventListener("click", ProductosPublicados);
   botonUsuario.addEventListener("click", Usuario);
+  botonEditar.addEventListener("click", EditarUsuario);

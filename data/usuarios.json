@@ -3,15 +3,22 @@
     "id": 0,
     "user": "ciro",
     "apellido": "raffa",
-    "curso": "3a",
-    "orientación": "tic",
+    "curso": "3b",
+    "orientacion": "medios",
     "mail": "ciro@gmail.com",
     "contraseña": "123",
-    "favoritos": [],
+    "favoritos": [
+      7
+    ],
     "carrito": [],
     "productosPublicados": [
       1,
-      2
+      2,
+      1,
+      3,
+      4,
+      0,
+      5
     ],
     "productosVendidos": 0
   },
