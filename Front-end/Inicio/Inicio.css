@@ -5,9 +5,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 2vh 3vh;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 1000;
 }
-
-
 
 
 .Botones {
@@ -16,129 +22,96 @@
   position: relative;
   gap: 8vh;
   top: 5x;
-  right: 8vh
+  right: 8vh;
 }
-
-
-
-
-
-
 
 
 .BarraDeBusqueda {
-width: 80vh;
-height: 4.5vh;
-background-color: white;
-border: 2px solid ;
-border-radius: 1vh;
-position: relative;
-left: -9vh;
-padding: 0.5vh 0.7vh;
-background-image: url('Lupa.png');
-background-repeat: no-repeat;
-background-size: 4vh;
-background-position: 97% center;
+  width: 80vh;
+  height: 4.5vh;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 1vh;
+  position: relative;
+  left: -9vh;
+  padding: 0.5vh 0.7vh;
+
+
+  background-image: url('Lupa.png');
+  background-repeat: no-repeat;
+  background-size: 4vh;
+  background-position: 97% center;
 }
-
-
-
-
-
-
 
 
 .BarraDeBusqueda::placeholder {
-color: rgba(0, 0, 0, 0.5) ;      
-font-family: 'Montserrat', sans-serif;
-font-weight: 600;                      
-font-size: 4vh;    
-line-height: 4.5vh;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 4vh;
+  line-height: 4.5vh;
 }
-
-
 
 
 .cuadradAzul {
-width: 15vw;
-height: 77vh;
-background-color: #154ACF;
-border-radius: 1vw;
-gap: 0.05vh;
-padding-top: 3vh;
-   position: absolute;
-   top: 19vh;
+  width: 16vw;
+  height: 77vh;
+  background-color: #154ACF;
+  border-radius: 1vw;
+  gap: 0.05vh;
+  padding-top: 3vh;
+  position: fixed;
+  top: 16vh;
+  left: 0.3vw;
+  height: calc(100vh - 20vh);
+  z-index: 900;
 }
 
 
-
-
-
-
-
-
-.ambosFilterContainer{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-font-family: 'Montserrat', sans-serif;
-font-weight: 600;
+.ambosFilterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
-
-
 
 
 .filterContainer1,
 .filterContainer2 {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-
-
-
-
-
 
 
 .despegableAño,
 .despegableCategoria {
-width: 10vw;
-height: 5vh;
-border: black;
-border-radius: 1vh;
+  width: 10vw;
+  height: 5vh;
+  border: black;
+  border-radius: 1vh;
 }
 
 
-
-
-
-
-
-
-.filterContainer1  {
-width: 10vw;
-height: 15vh;
-background-color: #154ACF;
-font-size: 4vh;
-gap: 2vh;
+.filterContainer1 {
+  width: 10vw;
+  height: 15vh;
+  background-color: #154ACF;
+  font-size: 4vh;
+  gap: 2vh;
 }
-
-
 
 
 .despegableCategoria {
-border: black;
-border-radius: 1vh;
+  border: black;
+  border-radius: 1vh;
 }
 
 
-
-
-.Categoria{
+.Categoria {
   font-size: 4vh;
   font-weight: bold;
   cursor: pointer;
@@ -147,32 +120,26 @@ border-radius: 1vh;
 }
 
 
-
-
-.Categoria:hover{
-text-decoration: underline;
+.Categoria:hover {
+  text-decoration: underline;
 }
 
 
-
-
-.oculto{
+.oculto {
   display: none;
 }
 
 
-
-
-.filterContainer2  {
-width: 10vw;
-height: 10vh;
-background-color: #154ACF;
+.filterContainer2 {
+  width: 10vw;
+  height: 10vh;
+  background-color: #154ACF;
 }
 
 
-.Productos-container{
+.Productos-container {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 80%;
   flex-wrap: wrap;
   background-color: white;
@@ -180,19 +147,13 @@ background-color: #154ACF;
   align-items: center;
   gap: 3vh;
   padding: 1vh;
-position: absolute;
-top: 30%;
-right: 1%;
+  position: absolute;
+  top: 30%;
+  right: 1%;
 }
 
 
-
-
-
-
-
-
-.productos{
+.productos {
   position: relative;
   top: -10%;
   border: 3px solid #1B1464;
@@ -200,55 +161,52 @@ right: 1%;
   background-color: white;
   width: 19vw;
   height: 60vh;
-
-
-
-
 }
 
 
-
-
-.titulos{
-position: absolute;
-top: 66%;
-color: white;
-font-weight: bold;
-font-size: 28px
+.titulos {
+  position: absolute;
+  top: 65%;
+  left: 2%;
+  color: white;
+  font-weight: bold;
+  font-size: 4.3vh;
 }
 
 
-
-
-.valoracion{
-position: absolute;
-top: 88%;
-left: 2%;
-color: white;
-font-weight: 400;
+.valoracion {
+  position: absolute;
+  top: 89%;
+  left: 2%;
+  color: white;
+  font-size: 2vh;
+  font-weight: 400;
 }
 
 
+.precio {
+  position: absolute;
+  top: 79%;
+  left: 2%;
+  color: white;
+  font-size: 3.2vh;
+  font-weight: 600;
+}
 
 
-
-
-
-
-.cuadradoAzulProducto1{
+.cuadradoAzulProducto1 {
   position: relative;
-  top: 61%;
+  top: 61.2%;
   background-color: #1B1464;
   border-radius: 28px;
   width: 19.2vw;
   height: 16.3vh;
   right: 1.2%;
+  overflow: hidden;
 }
 
 
-
-
-.cuadradoAzulProducto2{
+.cuadradoAzulProducto2 {
   position: absolute;
   top: 73%;
   background-color: #1B1464;
@@ -257,11 +215,7 @@ font-weight: 400;
 }
 
 
-
-
-
-
-/* Menu depsegable de categoria*/
+/* Dropdown Categoría */
 .dropdown {
   position: relative;
   width: 10vw;
@@ -277,13 +231,10 @@ font-weight: 400;
   display: flex;
   align-items: center;
   gap: 0.5vw;
- 
   position: absolute;
   top: -7vh;
   left: -1vw;
 }
-
-
 
 
 .flecha {
@@ -296,12 +247,9 @@ font-weight: 400;
 }
 
 
-
-
 .dropdownMenu {
   display: flex;
   flex-direction: column;
- 
   position: absolute;
   top: -1vh;
   left: -2.2vw;
@@ -309,19 +257,13 @@ font-weight: 400;
   background-color: #154ACF;
   border-radius: 1vh;
   padding: 1vh 1vw;
-
-
   z-index: 999;
-
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-
-
-    width: fit-content;  
-  min-width: 100%;      
+  width: fit-content;
+  min-width: 100%;
 }
 
 
@@ -338,16 +280,14 @@ font-weight: 400;
   border-bottom: 2px solid rgba(255, 255, 255, 0.75);
   color: black;
   cursor: pointer;
-  white-space: nowrap;  
+  white-space: nowrap;
   font-size: 3.5vh;
-  text-align: center;    
-  width: 100%;            
+  text-align: center;
+  width: 100%;
 }
 
 
-
-
-/* Menu depsegable de año*/
+/* Dropdown Año */
 .filterContainer2 .dropdown {
   position: relative;
   width: 10vw;
@@ -363,18 +303,9 @@ font-weight: 400;
   display: flex;
   align-items: center;
   gap: 0.5vw;
-
-
   position: absolute;
   top: 5vh;
   left: -1vw;
-}
-
-
-
-
-.flecha {
-  transition: transform 0.3s ease;
 }
 
 
@@ -386,30 +317,20 @@ font-weight: 400;
 .dropdownMenuAño {
   display: flex;
   flex-direction: column;
-
-
   position: absolute;
   top: -1vh;
   left: -2.2vw;
-
-
   width: 12vw;
   background-color: #154ACF;
   border-radius: 1vh;
   padding: 1vh 1vw;
-
-
   z-index: 999;
-
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-
-
-  width: fit-content;  
-  min-width: 100%;    
+  width: fit-content;
+  min-width: 100%;
 }
 
 
@@ -426,8 +347,6 @@ font-weight: 400;
   border-bottom: 2px solid rgba(255, 255, 255, 0.75);
   color: black;
   cursor: pointer;
-
-
   white-space: nowrap;
   font-size: 3.5vh;
   text-align: center;
@@ -435,18 +354,59 @@ font-weight: 400;
 }
 
 
+.Botones2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17vw;
+  height: 7vh;
+  padding: 0.5vh 1vw;
+  position: relative;
+  top: 20%;
+  left: -15%;
+}
 
 
 .botonBorrarFiltros {
+  width: 7.4vw;
+  height: 4.9vh;
   margin-top: 2vh;
   padding: 0.5vh 1vw;
-  border-radius: 0.5vh;
-  background-color: #154ACF;
+  border-radius: 1vh;
+  background-color: #1B1464;
+  border: none;
   color: white;
+  font-size: 1.8vh;
   font-weight: bold;
   cursor: pointer;
   position: relative;
   top: 20%;
+  left: 5%;
+}
+
+
+.botonAgregarProducto {
+  width: 7.4vw;
+  height: 4.9vh;
+  margin-top: 2vh;
+  padding: 0.5vh 1vw;
+  border-radius: 1vh;
+  background-color: #1B1464;
+  border: none;
+  font-size: 1.8vh;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: 20%;
+  left: 6%;
+  color: white;
+  text-decoration: none;
+}
+
+
+.botonAgregarProducto a {
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -462,7 +422,7 @@ font-weight: 400;
 }
 
 
-.filterContainer3Texto{
+.filterContainer3Texto {
   font-size: 25px;
   padding: 0%;
 }
@@ -488,3 +448,15 @@ font-weight: 400;
   color: black;
   font-size: 2.5vh;
 }
+
+
+.imagenes {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  left: 10%;
+}
+
+

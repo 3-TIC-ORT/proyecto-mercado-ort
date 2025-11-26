@@ -1,90 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="Inicio.css">
-    </head>
-    <body>
-       <header class="header">
-        <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo" height="70%" width="70%"></img> </a>
-        <input type="text" id="Búsqueda" class="BarraDeBusqueda" name="Búsqueda" placeholder="Buscar productos" required>
-       
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="Inicio.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
+</head>
+
+
+<body>
+
+
+    <!-- ---------------- HEADER ---------------- -->
+    <header class="header">
+        <a href="../Inicio/Inicio.html">
+            <img src="Logo.png" class="Logo" height="70%" width="70%">
+        </a>
+
+
+        <input type="text" id="Búsqueda" class="BarraDeBusqueda"
+               placeholder="Buscar productos" required>
+
+
         <div class="Botones">
-         <div class="user">
-            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png"height="70%" width="70%"></a></div>
-         <div class="favoritos">
-            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png" height="70%" width="70%"></a></div>
-         <div class="cart">
-            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt="" height="70%" width="70%"></a></div>
+            <div class="user">
+                <a href="../usuarioinfo/usuario.html">
+                    <img src="Cuenta.png" height="70%" width="70%">
+                </a>
+            </div>
+
+
+            <div class="favoritos">
+                <a href="../Favoritos/Favoritos.html">
+                    <img src="Favoritos.png" height="70%" width="70%">
+                </a>
+            </div>
+
+
+            <div class="cart">
+                <a href="../pantalla del carrito/pantalladelcarrito.html">
+                    <img src="Carrito.png" height="70%" width="70%">
+                </a>
+            </div>
         </div>
-      </header>
-       
-      <div class="cuadradAzul">
-       <div class="ambosFilterContainer">
-        <section class="filterContainer1">
-  <div class="dropdown">
-    <div class="dropdownLabel" id="categoriaLabel">
-      Categorías <img src="flecha.png" class="flecha" alt="">
-    </div>
-
-
-    <div class="dropdownMenu" id="categoriaMenu">
-      <p>Útiles escolares</p>
-      <p>Cuadernos</p>
-      <p>Mochilas</p>
-      <p>Carpetas</p>
-      <p>Hojas</p>
-    </div>
-  </div>
-</section>
-
-
-       <section class="filterContainer2">
-  <div class="dropdown">
-    <div class="dropdownLabelAño" id="añoLabel">
-      Año <img src="flecha.png" class="flecha" alt="">
-    </div>
-
-
-    <div class="dropdownMenuAño" id="añoMenu">
-      <p>1 año</p>
-      <p>2 año</p>
-      <p>3 año</p>
-      <p>4 año</p>
-      <p>5 año</p>
-    </div>
-  </div>
-</section>
-       </div>
-
-
-<button id="botonBorrarFiltros" class="botonBorrarFiltros">Borrar filtros</button>
+    </header>
 
 
 
 
+    <!-- ---------------- CONTENIDO PRINCIPAL ---------------- -->
+    <main>
 
 
-       
-       
-<section class="filterContainer3">
-  <h3 class="filterContainer3Texto">Rango de precio</h3>
-  <div class="precioInputsDiv">
-    <input type="number" id="precioMin" placeholder="minimo">
-    <span>A</span>
-    <input type="number" id="precioMax" placeholder="maximo">
-  </div>
-</section>
+        <div class="cuadradAzul">
 
 
-      </div>
+            <div class="ambosFilterContainer">
 
 
-      <section class="">
-        <div class="Productos-container" id="Productos-container"></div>
-      </section>
-   <script src="Inicio.js"></script>
+                <!-- CATEGORÍA -->
+                <section class="filterContainer1">
+                    <div class="dropdown">
+                        <div class="dropdownLabel" id="categoriaLabel">
+                            Categorías <img src="flecha.png" class="flecha" alt="">
+                        </div>
+
+
+                        <div class="dropdownMenu" id="categoriaMenu">
+                            <p>Útiles escolares</p>
+                            <p>Cuadernos</p>
+                            <p>Mochilas</p>
+                            <p>Carpetas</p>
+                            <p>Hojas</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- AÑO -->
+                <section class="filterContainer2">
+                    <div class="dropdown">
+                        <div class="dropdownLabelAño" id="añoLabel">
+                            Año <img src="flecha.png" class="flecha" alt="">
+                        </div>
+
+
+                        <div class="dropdownMenuAño" id="añoMenu">
+                            <p>1 año</p>
+                            <p>2 año</p>
+                            <p>3 año</p>
+                            <p>4 año</p>
+                            <p>5 año</p>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+
+
+            <div class="Botones2">
+
+
+                <button id="botonBorrarFiltros" class="botonBorrarFiltros">
+                    Borrar filtros
+                </button>
+
+
+                <button id="botonAgregarProducto" class="botonAgregarProducto">
+                    <a href="../pantalla de publicación de producto/pantalladepublicacionproducto.html">
+                        Subir producto
+                    </a>
+                </button>
+
+
+            </div>
+
+
+            <!-- RANGO DE PRECIO -->
+            <section class="filterContainer3">
+                <h3 class="filterContainer3Texto">Rango de precio</h3>
+
+
+                <div class="precioInputsDiv">
+                    <input type="number" id="precioMin" placeholder="minimo">
+                    <span>A</span>
+                    <input type="number" id="precioMax" placeholder="maximo">
+                </div>
+            </section>
+
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+        <section>
+            <div class="Productos-container" id="Productos-container"></div>
+        </section>
+
+
+    </main>
+
+
+    <script src="Inicio.js"></script>
+
+
 </body>
 </html>
+
+
+
+
+
+

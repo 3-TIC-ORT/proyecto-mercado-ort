@@ -24,59 +24,61 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <header class="header">
         <a href="../Inicio/Inicio.html">  <img src="Logo.png" class="Logo" height="65%" width="65%"></img> </a>
         <input type="text" id="Búsqueda" class="BarraDeBusqueda" name="Búsqueda" placeholder="Buscar productos" required>
        
         <div class="Botones">
          <div class="user">
-            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png" height="80%" width="80%"></a></div>
+            <a href="../usuarioinfo/usuario.html"> <img src="Cuenta.png" height="70%" width="70%"></a></div>
          <div class="favoritos">
-            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png" height="80%" width="80%"></a></div>
+            <a href="../Favoritos/Favoritos.html"> <img src="Favoritos.png" height="70%" width="70%"></a></div>
          <div class="cart">
-            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt="" height="80%" width="80%"></a></div>
+            <a href="../pantalla del carrito/pantalladelcarrito.html">  <img src="Carrito.png" alt="" height="70%" width="70%"></a></div>
         </div>
       </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div class="cuadradoAzul1">
+        <div class="containerLista">  
         <div class="listaProducto">
             <div class="rayaAzul"></div>
-            <div class="imagenContainer"> <img src="lapicera.png" alt="" class="imagenProducto"></div>
-            <p class="precio">$10000</p>
-            <p class="nombreProducto">Nombre del Producto </p>
-            <p class="descripcionProducto">Descripcion</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="imagenContainer"> <img src="cuaderno.jpeg" alt="" class="imagenProducto"></div>
+            <p class="precio">$1600</p>
+            <p class="nombreProducto">Cuaderno A4 </p>
+            <p class="descripcionProducto">Nuevo </p>
         </div>
+        <div class="listaProducto Mochila">
+            <div class="rayaAzul"></div>
+            <div class="imagenContainer"> <img src="lapicera bic.jpeg" alt="" class="imagenProducto"></div>
+            <p class="precio">$400</p>
+            <p class="nombreProducto">Lapicera BIC </p>
+            <p class="descripcionProducto">Azul </p>
+        </div>
+        <div class="listaProducto Libro">
+            <div class="rayaAzul"></div>
+            <div class="imagenContainer"> <img src="lapiz grafito.jpeg" alt="" class="imagenProducto"></div>
+            <p class="precio">$300</p>
+            <p class="nombreProducto">Lapiz grafito </p>
+            <p class="descripcionProducto">Usado </p>
+        </div>
+         </div>
       </div>
  
       <div class="cuadradoAzul2">
@@ -84,6 +86,12 @@
         <div class="TextoResumenCompra">
           <p class="TituloResumen">Resumen</p>
           <p class="TextoCompra">Cantidad de productos:</p>
+          <div class="containerInfo">    
+          <p class="TextoInfo"> Cuaderno A4 $1600 </p>
+          <p class="TextoInfo"> Lapicera BIC $400 </p>
+          <p class="TextoInfo"> Lapiz de grafito  $300 </p>
+          <p class="Total"> Total: $2300</p>
+          </div>
         </div>
           <div class="finalizarCompra">
            <a href="../Compra finalizada/Compra finalizada.html">
@@ -91,19 +99,22 @@
            </a>
          </div>
        </div>
+       <div class="alias" id="alias">Alias: Sol.Pared.Luna </div>
       </div>
      
       <p class="MetodoDePagoTexto">Elegir Metodo de pago:</p>
       <div class="MetodosDePago">
         <div class="BotonPago" data-metodo="MercadoPago"> <img src="MercadoPago.png" alt=""></div>
-        <div class="BotonPago" data-metodo="Uala"> <img src="Uala.png" alt=""></div>
-        <div class="BotonPago" data-metodo="Modo"> <img src="Modo.png" alt=""></div>
         <div class="BotonPago" data-metodo="Efectivo"> <img src="Efectivo.png" alt=""></div>
       </div>
-
-
 
 
     <script src="finalizacion de compra.js"></script>
 </body>
 </html>
+
+
+
+
+
+
