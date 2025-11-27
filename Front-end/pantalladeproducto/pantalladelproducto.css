@@ -42,7 +42,6 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  
 }
 
 .Botones img {
@@ -56,148 +55,154 @@
   transform: scale(1.1);
 }
 
-  
-  .product-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    padding: 30px;
-  }
-  
-  .product-images {
-    border: 2px solid black;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-images img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+/* ================================
+   CONTENEDOR PRINCIPAL
+   TODO UN MISMO FONDO
+   SIN BLOQUES SEPARADOS
+   ================================ */
+.product-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+  gap: 35px;
+  padding: 30px;
+  align-items: flex-start;
+  background: none;   /* IMPORTANTE: sin fondo */
 }
 
-  
-  .main-image img {
-    width: 120%;
-    max-width: 250px;
-    border-radius: 20px;
-    border: #0c2366
-  }
-  
-  .thumbnail-list {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .thumbnail-list img {
-    width: 60px;
-    cursor: pointer;
-    border-radius: 15px;
-    border: #041958;
-    border: 2px solid transparent;
-  }
-  
-  .thumbnail-list img:hover {
-    border: 2px solid #0c2366;
-  }
-  
-  .product-info {
-     background: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
-    position: relative;
-    font-family: "Stack Sans Healine" sans-serif;
-    font-weight: semibold;
-    font-size: large;
-    font-weight: 700;
-  }
-  
-  .icon-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  
-  .seller-info {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-  }
-  
-  .seller-card {
-    background: #041958;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .btn {
-  
-    display: block;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .comprar {
-    
-    display: block;
-    width: 250px;
-    padding: 12px 0;
-    margin: 10px auto;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: rgb(255, 255, 255);
-    color: white;
-    background-color: #154acf; 
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .carrito {
-    display: block;
-    width: 250px;
-    padding: 12px 0;
-    margin: 10px auto;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: #0f0a41; 
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  .comprar:hover, .carrito:hover {
-  transform: scale(1.03);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.22);
+
+/* ================================
+   COLUMNA IZQUIERDA — IMÁGENES
+   ================================ */
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
-#resultadosBusqueda {
-  position: absolute;
-  background: white;
-  max-height: 300px;
-  overflow-y: auto;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+.main-image img {
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+}
+
+.thumbnail-list {
+  display: flex;
+  gap: 12px;
+}
+
+.thumbnail-list img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
   border-radius: 10px;
-  z-index: 2000;
-  display: none;
+  border: 2px solid transparent;
+  transition: 0.25s;
+}
+
+.thumbnail-list img:hover {
+  border: 2px solid #154ACF;
+}
+
+
+/* ================================
+   COLUMNA DEL MEDIO — INFO PRODUCTO
+   SIN BLOQUES — LETRAS GRANDES
+   ================================ */
+.product-info {
+  background: none !important;   /* SIN RECTÁNGULO */
+  box-shadow: none !important;   /* SIN SOMBRA */
+  padding: 0;                    /* NO BORDE INTERNO */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.product-info h2 {
+  font-size: 42px;   /* PRECIO MUY GRANDE */
+  font-weight: 800;
+}
+
+.product-info h3 {
+  font-size: 34px;   /* TÍTULO GRANDE */
+  font-weight: 700;
+}
+
+.product-info p {
+  font-size: 22px;   /* TEXTO GRANDE */
+  line-height: 1.4;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* CONTENEDOR DE LA COLUMNA DERECHA */
+.seller-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* TARJETA AZUL CON LA INFO DEL VENDEDOR */
+.seller-card {
+  background: #154ACF;
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+/* TÍTULO “Info del vendedor” DENTRO DEL CUADRADO */
+.seller-info h4 {
+  margin: 0;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* BOTONES POR FUERA DEL CUADRADO AZUL */
+.btn {
+  background-color: #154ACF;
+  color: white;
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn carrito{
+
+  
+}
+
+
+.seller-info .seller-name {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.seller-info p {
+  font-size: 20px;
+}
+
+.seller-info button {
+  background-color: #154ACF;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 18px;
+  cursor: pointer;
 }
